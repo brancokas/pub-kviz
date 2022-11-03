@@ -104,40 +104,235 @@
 					\textit{Funkcionalne zahtjeve razraditi u obliku obrazaca uporabe. Svaki obrazac je potrebno razraditi prema donjem predlošku. Ukoliko u nekom koraku može doći do odstupanja, potrebno je to odstupanje opisati i po mogućnosti ponuditi rješenje kojim bi se tijek obrasca vratio na osnovni tijek.}\\
 					
 
-					\noindent \underbar{\textbf{UC$<$broj obrasca$>$ -$<$ime obrasca$>$}}
+					\noindent \underbar{\textbf{UC$$1$$ -$$ Registracija$$}}
 					\begin{packed_item}
 	
-						\item \textbf{Glavni sudionik: }$<$sudionik$>$
-						\item  \textbf{Cilj:} $<$cilj$>$
-						\item  \textbf{Sudionici:} $<$sudionici$>$
-						\item  \textbf{Preduvjet:} $<$preduvjet$>$
+						\item \textbf{Glavni sudionik: }Korisnik
+						\item  \textbf{Cilj: }Stvoriti korisnički račun za pristup sustavu
+						\item  \textbf{Sudionici:} Baza podataka
+						\item  \textbf{Preduvjet:} -
 						\item  \textbf{Opis osnovnog tijeka:}
 						
 						\item[] \begin{packed_enum}
 	
-							\item $<$opis korak jedan$>$
-							\item $<$opis korak dva$>$
-							\item $<$opis korak tri$>$
-							\item $<$opis korak četiri$>$
-							\item $<$opis korak pet$>$
+							\item 	Korisnik odabire opciju za registraciju
+							\item  Korisnik unosi tražene podatke
+							\item Podaci se spremaju u bazu podataka
+							\item Korisnika se preusmjerava na početnu stranicu
+							
 						\end{packed_enum}
 						
 						\item  \textbf{Opis mogućih odstupanja:}
 						
 						\item[] \begin{packed_item}
 	
-							\item[2.a] $<$opis mogućeg scenarija odstupanja u koraku 2$>$
+							\item[2.a] Korisnik unosi neispravne podatke (zauzeti ili neispravni e-mail ili korisničko ime, unos podataka u nedopuštenom formatu)
 							\item[] \begin{packed_enum}
 								
-								\item $<$opis rješenja mogućeg scenarija korak 1$>$
-								\item $<$opis rješenja mogućeg scenarija korak 2$>$
+								\item Sustav upozorava korisnika na neispravnost unesenih podataka i vraća ga na stranicu za registraciju.
+								\item Korisnik mijenja podatke ili odustaje od registracije
 								
 							\end{packed_enum}
-							\item[2.b] $<$opis mogućeg scenarija odstupanja u koraku 2$>$
-							\item[3.a] $<$opis mogućeg scenarija odstupanja  u koraku 3$>$
-							
 						\end{packed_item}
 					\end{packed_item}
+				
+				\noindent \underbar{\textbf{UC$$2$$ -$$ Prijava u sustav$$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Korisnik
+					\item  \textbf{Cilj:} Pristupiti korisničkom sučelju
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Klijent posjeduje korisnički račun
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Korisnik unosi korisničko ime i lozinku
+						\item Podaci prolaze kroz provjeru
+						\item Korisnik dobija pristup korisničkom sučelju
+					\end{packed_enum}
+					
+					\item  \textbf{Opis mogućih odstupanja:}
+					
+					\item[] \begin{packed_item}
+						
+						\item[2.a] Uneseni su neispravni korisničko ime ili lozinka 
+						\item[] \begin{packed_enum}
+							
+							\item Sustav obavještava korisnika da su uneseni pogrešni podaci i vraća ga na stranicu za prijavu			
+						\end{packed_enum}			
+					\end{packed_item}
+				\end{packed_item}
+			
+			
+				\noindent \underbar{\textbf{UC$$3$$ -$$ Pregled podataka korisničkog profila$$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Korisnik
+					\item  \textbf{Cilj:} Pregledati podatke korisničkog profila
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Korisnik odabire opciju „Moj profil“.
+						\item Korisnik pregledava podatke profila.
+					\end{packed_enum}
+					
+				\end{packed_item}
+			
+				
+				\noindent \underbar{\textbf{UC$$4$$ -$$ Uređivanje podataka korisničkog profila$$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Korisnik
+					\item  \textbf{Cilj:} Urediti podatke korisničkog profila
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Korisnik odabire opciju „Moj profil“
+						\item Korisnik odabire opciju za promjenu podataka
+						\item Korisnik mijenja odabrane podatke
+						\item Korisnik sprema promjene
+						\item Baza podataka se ažurira
+					\end{packed_enum}
+					
+					\item  \textbf{Opis mogućih odstupanja:}
+					
+					\item[] \begin{packed_item}
+						
+						\item[4.a] Korisnik ne spremi promjene
+						\item[] \begin{packed_enum}
+							
+							\item Promjene se odbacuju
+							
+						\end{packed_enum}
+
+					\end{packed_item}
+				\end{packed_item}
+			
+				
+				\noindent \underbar{\textbf{UC$$5$$ -$$ Kreiranje nadolazećih događaja$$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Sastavljač kviza
+					\item  \textbf{Cilj:} Kreiranje novih kvizova
+					\item  \textbf{Sudionici:} -
+					\item  \textbf{Preduvjet:} Sastavljač kviza je prijavljen u sustav
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Sastavljač odabire opciju „Kreiraj novi kviz“
+						\item Sastavljač popunjava potrebne podatke
+						\item Sastavljač sprema promjene
+						\item Novi kviz čeka odobrenje administratora
+					\end{packed_enum}
+
+				\end{packed_item}
+			
+			
+				\noindent \underbar{\textbf{UC$$6$$ -$$ Odobravanje kreiranih događaja$$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Administrator
+					\item  \textbf{Cilj:} Odobriti nove kvizove
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Administrator je prijavljen u sustav
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Administratoru je dostupan popis novih kvizova koji čekaju odobrenje
+						\item Administrator odabire one kvizove koje želi odobriti
+						\item Baza podataka se osvježava
+						\item Odobreni kvizovi se objavljuju
+					\end{packed_enum}
+				\end{packed_item}
+			
+			
+				\noindent \underbar{\textbf{UC$$7$$ -$$ Zabrana kreniranih događaja$$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Administrator
+					\item  \textbf{Cilj:} Zabraniti neke kvizove
+					\item  \textbf{Sudionici:} -
+					\item  \textbf{Preduvjet:} Administrator je prijavljen u sustav
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Administratoru je dostupan popis novih kvizova koji čekaju odobrenje
+						\item Administrator odabire one kvizove koje želi zabraniti
+						\item Odabrani kvizovi se odbacuju
+					\end{packed_enum}
+					
+				\end{packed_item}
+			
+			
+			
+				\noindent \underbar{\textbf{UC$$8$$ -$$ Objava nadolazećih događaja$$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Sastavljač kviza
+					\item  \textbf{Cilj:} Objaviti nove kvizove
+					\item  \textbf{Sudionici:} Baza podataka, administrator
+					\item  \textbf{Preduvjet:} Sastavljač kviza je prijavljen u sustav, administrator je odobrio događaj (kviz) koji je sastavljač kreirao
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Sastavljač je dobio odobrenje za kreirani kviz
+						\item Sastavljač objavljuje kviz koji je vidljiv ostalim korisnicima sustavima
+					\end{packed_enum}
+					
+				
+				\end{packed_item}
+			
+			
+				\noindent \underbar{\textbf{UC$$9$$ -$$ Pregled svih objavljenih događaja$$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Korisnik
+					\item  \textbf{Cilj:} Pregledati sve događaje koji su objavljeni
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Korisnik odabire opciju „Svi pub kvizovi“
+						\item Svi odobreni kvizovi korisniku se prikazuju na zaslonu
+
+					\end{packed_enum}
+
+				\end{packed_item}
+			
+			
+			
+			
+				\noindent \underbar{\textbf{UC$$10$$ -$$ Pregled svojih objavljenih događaja$$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Sastavljač kviza
+					\item  \textbf{Cilj:} Pregledati svoje kreirane kvizove
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Sastavljač kviza je prijavljen u sustav
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Sastavljač kviza bira opciju „Moji pub kvizovi“
+						\item Svi sastavljačevi kreirani kvizovi prikazuju mu se na zaslonu
+					\end{packed_enum}
+					
+				\end{packed_item}
+			
+			
 				
 					
 				\subsubsection{Dijagrami obrazaca uporabe}
