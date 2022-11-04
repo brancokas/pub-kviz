@@ -331,6 +331,169 @@
 					\end{packed_enum}
 					
 				\end{packed_item}
+
+
+				\noindent \underbar{\textbf{UC$$19$$ -$$ Pregled obavijesti o napuštanju člana ekipe $$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Korisnik
+					\item  \textbf{Cilj:} Pregledati obavijest o napuštanju člana ekipe
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Korisnik klikom odabire obavijest
+						\item Obavijest o napuštanju člana ekipe mu se prikazuje na zaslonu
+					\end{packed_enum}
+
+					\item  \textbf{Opis mogućih odstupanja:}
+					
+					\item[] \begin{packed_item}
+						
+						\item[19.a] Korisnik koji je napustio ekipu je zadnji član te ekipe
+						\item[] \begin{packed_enum}
+							
+							\item Obavijest se ne šalje nikom
+							
+						\end{packed_enum}
+
+					\end{packed_item}
+					
+				\end{packed_item}
+
+
+				\noindent \underbar{\textbf{UC$$20$$ -$$ Prijava ekipe na događaj $$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Korisnik
+					\item  \textbf{Cilj:} Prijaviti ekipu na događaj
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Korisnik odabire događaj na koji želi prijaviti ekipu
+						\item Korisnik prijavljuje ekipu na događaj
+						\item Ažurira se broj slobodnih mjesta (jedno slobodno mjesto manje)
+						\item Ažurira se baza podataka
+					\end{packed_enum}
+
+					\item  \textbf{Opis mogućih odstupanja:}
+					
+					\item[] \begin{packed_item}
+						
+						\item[20.a] Ekipa je već prijavljena na neki događaj u to vrijeme
+						\item[] \begin{packed_enum}
+							
+							\item Odbija se prijava ekipe za taj događaj
+							
+						\end{packed_enum}
+
+					\end{packed_item}
+					
+				\end{packed_item}
+
+
+				\noindent \underbar{\textbf{UC$$21$$ -$$ Pregled obavijesti o prijavi na događaj $$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Korisnik
+					\item  \textbf{Cilj:} Pregledati obavijest o prijavi na događaj
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Korisnik klikom odabire obavijest
+						\item Obavijest o događaju zajedno s informacijama događaja mu se prikazuje na zaslonu
+					\end{packed_enum}
+					
+				\end{packed_item}
+
+				
+				\noindent \underbar{\textbf{UC$$22$$ -$$ Blokiranje korisnika $$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Administrator
+					\item  \textbf{Cilj:} Blokirati korisnika
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Administrator je prijavljen u sustav
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Administrator odabire opciju blokiranja korisnika
+						\item Administrator pronalazi željenog korisnika
+						\item Administrator blokira korisnika
+						\item Ažurira se baza podataka
+					\end{packed_enum}
+					
+				\end{packed_item}
+
+
+				\noindent \underbar{\textbf{UC$$23$$ -$$ Brisanje objavljenih događaja $$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Administrator
+					\item  \textbf{Cilj:} Brisanje objavljenog događaja
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Administrator je prijavljen u sustav
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Administrator odabire prikaz svih objavljenih događaja
+						\item Svi kreirani kvizovi prikazuju mu se na zaslonu
+						\item Administrator odabire koji događaj koji želi obrisati
+						\item Administrator briše događaj
+						\item Događaj se briše iz baze podataka
+					\end{packed_enum}
+					
+				\end{packed_item}
+
+
+				\noindent \underbar{\textbf{UC$$24$$ -$$ Dodjela administratorskih prava korisniku $$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Administrator
+					\item  \textbf{Cilj:} Dodjeliti administratorska prava korisniku
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Administrator je prijavljen u sustav
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+	
+						\item Administrator pregledava sve korisnike					
+						\item Administrator bira korisnika kojem želi dodjeliti administratorska prava
+						\item Administrator dodjeljuje administratorska prava korisniku
+						\item Promjene se ažuriraju u bazi podataka
+					\end{packed_enum}
+					
+				\end{packed_item}
+
+
+				\noindent \underbar{\textbf{UC$$25$$ -$$ Pregled profila sastavljača $$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Korisnik
+					\item  \textbf{Cilj:} Pregledati podatke profila sastavljača
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Korisnik odabire opciju pregleda profila sastavljača.
+						\item Korisnik pregledava podatke profila sastavljača.
+					\end{packed_enum}
+					
+				\end{packed_item}
+
+				
 			
 			
 				
