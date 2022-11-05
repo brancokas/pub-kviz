@@ -333,6 +333,168 @@
 				\end{packed_item}
 
 
+				\noindent \underbar{\textbf{UC$$11$$ -$$ Pregled prijava za objavljene događaje$$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Igrač
+					\item  \textbf{Cilj:} Pregledati na koje događaje je igrač prijavljen
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Igrač je prijavljen u sustav
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Igrač odabire opciju „Događaji“
+						\item Igrač odabire opciju „Kvizovi“
+						\item Igrač odabire opciju „Moji pub kvizovi“
+						\item Igrač pregledava svoje kvizove
+						
+					\end{packed_enum}
+					
+				\end{packed_item}
+				
+				
+				\noindent \underbar{\textbf{UC$$12$$ -$$ Pregled detalja objavljenog događaja$$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Korisnik
+					\item  \textbf{Cilj:} Vidjeti detalje o događaju na koji se želite prijaviti
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Nema
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Igrač odabire opciju „Događaji“
+						\item Igrač odabire opciju „Kvizovi“
+						\item Igrač odabire opciju „Svi pub kvizovi“
+						\item Korisnik pregledava detalje pojedinih događaja, oni koji nisu registrirani imaju ograničen uvid u podatke tj. ono osnovno
+						
+					\end{packed_enum}
+					
+				\end{packed_item}
+				
+				\noindent \underbar{\textbf{UC$$13$$ -$$ Pretraživanje objavljenih događaja$$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Korisnik
+					\item  \textbf{Cilj:} Na lakši način pronaći željeni pub kviz
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Igrač odabire opciju „Događaji“
+						\item Igrač odabire opciju „Kvizovi“
+						\item Igrač odabire opciju „Svi pub kvizovi“
+						\item Korisnik u okvir za pretraživanje upisuje naziv događaja koji želi ili ime kafića u kojem se održava
+						
+					\end{packed_enum}
+					
+				\end{packed_item}
+				
+				
+				\noindent \underbar{\textbf{UC$$14$$ -$$ Filtriranje objavljenih događaja$$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Korisnik
+					\item  \textbf{Cilj:} Pronaći pub kviz koji najviše odgovara korisniku
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Igrač odabire opciju „Događaji“
+						\item Igrač odabire opciju „Kvizovi“
+						\item Igrač odabire opciju „Svi pub kvizovi“
+						\item Korisnik odabire raspon vrijednosti za udaljenost od kafića u kojem se kviz održava, iznos kotizacije, vrstu kviza i sl.
+						\item Korisnik klikne „Filtriraj“
+						
+					\end{packed_enum}
+					
+				\end{packed_item}
+				
+				
+				\noindent \underbar{\textbf{UC$$15$$ -$$ Pronalazak ekipe za kviz$$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Korisnik
+					\item  \textbf{Cilj:} Pronaći ekipu nasumično jer korisnik nema svoju ekipu
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Korisnik odabire opciju „Događaji“
+						\item Korisnik odabire opciju „Timovi“
+						\item Korisnik odabire opciju „Pronađi tim“
+						
+					\end{packed_enum}
+					
+				\end{packed_item}
+				
+				
+				\noindent \underbar{\textbf{UC$$16$$ -$$ Pregled obavijesti o pronađenoj ekipi$$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Korisnik
+					\item  \textbf{Cilj:} Pregled obavijesti o tome kojem je timu dodijeljen korisnik
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav, odabrao je opciju „Pronađi tim“ i dodan je u neki tim
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Korisnik odabire opciju „Obavijesti“
+						\item Korisnik pregledava obavijest o pronađenoj ekipi
+						
+					\end{packed_enum}
+					
+				\end{packed_item}
+				
+				
+				\noindent \underbar{\textbf{UC$$17$$ -$$ Pregled obavijesti o novom članu ekipe$$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Korisnik
+					\item  \textbf{Cilj:} Obavijestiti korisnika, koji ima svoj (nepotpun) tim, da mu je dodan novi član
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav i ima svoj tim
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Korisnik odabire opciju „Obavijesti“
+						\item Korisnik pregledava obavijesti o novom članu ekipe
+						
+					\end{packed_enum}
+					
+				\end{packed_item}
+				
+				
+				\noindent \underbar{\textbf{UC$$18$$ -$$ Napuštanje ekipe$$}}
+				\begin{packed_item}
+					
+					\item \textbf{Glavni sudionik: }Korisnik
+					\item  \textbf{Cilj:} Igrač može izaći iz tima u kojem se trenutno nalazi
+					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Preduvjet:} Igrač je prijavljen u sustav i trenutno se nalazi u nekom timu
+					\item  \textbf{Opis osnovnog tijeka:}
+					
+					\item[] \begin{packed_enum}
+						
+						\item Korisnik odabire opciju „Događaji“
+						\item Korisnik odabire opciju „Timovi“
+						\item Korisnik odabire opciju „Izađi iz tima“
+						
+					\end{packed_enum}
+					
+				\end{packed_item}
+
+
 				\noindent \underbar{\textbf{UC$$19$$ -$$ Pregled obavijesti o napuštanju člana ekipe $$}}
 				\begin{packed_item}
 					
