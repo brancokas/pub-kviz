@@ -1,28 +1,15 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.5)  6 NOV 2022 11:54
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.12)  6 NOV 2022 11:46
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.12)  6 NOV 2022 18:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **PROGI_ProjektnaDokumentacija.tex
 (./PROGI_ProjektnaDokumentacija.tex
-<<<<<<< HEAD
-LaTeX2e <2022-11-01>
-L3 programming layer <2022-11-02>
-(c:/texlive/2022/texmf-dist/tex/latex/base/report.cls
-Document Class: report 2022/07/02 v1.4n Standard LaTeX document class
-(c:/texlive/2022/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
-=======
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-09-28>
 (d:/texlive/2022/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
 (d:/texlive/2022/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
 )
 \c@part=\count185
 \c@chapter=\count186
@@ -35,17 +22,12 @@ File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 \c@table=\count193
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
-\bibindent=\dimen140
+\bibindent=\dimen138
 )
-<<<<<<< HEAD
-(c:/texlive/2022/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2022/10/23 3.82 The Babel package
-=======
 (d:/texlive/2022/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2022/10/04 3.81 The Babel package
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
 \babel@savecnt=\count194
-\U@D=\dimen141
+\U@D=\dimen139
 \l@unhyphenated=\language87
 
 (d:/texlive/2022/texmf-dist/tex/generic/babel/txtbabel.def)
@@ -82,11 +64,11 @@ Package: amstext 2021/08/26 v2.01 AMS text
 (d:/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
-\ex@=\dimen142
+\ex@=\dimen140
 ))
 (d:/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen143
+\pmbraise@=\dimen141
 )
 (d:/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
@@ -108,7 +90,7 @@ LaTeX Info: Redefining \big on input line 722.
 LaTeX Info: Redefining \Big on input line 723.
 LaTeX Info: Redefining \bigg on input line 724.
 LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen144
+\big@size=\dimen142
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \macc@depth=\count267
@@ -126,12 +108,12 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \column@=\count272
 \maxfields@=\count273
 \andhelp@=\toks19
-\eqnshift@=\dimen145
-\alignsep@=\dimen146
-\tagshift@=\dimen147
-\tagwidth@=\dimen148
-\totwidth@=\dimen149
-\lineht@=\dimen150
+\eqnshift@=\dimen143
+\alignsep@=\dimen144
+\tagshift@=\dimen145
+\tagwidth@=\dimen146
+\totwidth@=\dimen147
+\lineht@=\dimen148
 \@envbody=\toks20
 \multlinegap=\skip50
 \multlinetaggap=\skip51
@@ -228,7 +210,7 @@ LaTeX Info: Redefining \not on input line 1043.
 (d:/texlive/2022/texmf-dist/tex/generic/mathdots/mathdots.sty
 Package: mathdots 2014/06/11 v0.9 Improve and add various macros for dots in ma
 th.
-\MDo@unit=\dimen151
+\MDo@unit=\dimen149
 \MDo@dotsbox=\box53
 \MDoprekern=\muskip17
 \MDopostkern=\muskip18
@@ -239,24 +221,18 @@ Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \ttl@box=\box54
 \beforetitleunit=\skip52
 \aftertitleunit=\skip53
-\ttl@plus=\dimen152
-\ttl@minus=\dimen153
+\ttl@plus=\dimen150
+\ttl@minus=\dimen151
 \ttl@toksa=\toks22
-\titlewidth=\dimen154
-\titlewidthlast=\dimen155
-\titlewidthfirst=\dimen156
+\titlewidth=\dimen152
+\titlewidthlast=\dimen153
+\titlewidthfirst=\dimen154
 )
-<<<<<<< HEAD
-(c:/texlive/2022/texmf-dist/tex/latex/tools/array.sty
-Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen157
-=======
 (d:/texlive/2022/texmf-dist/tex/latex/tools/array.sty
 Package: array 2022/03/10 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen155
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
 \ar@mcellbox=\box55
-\extrarowheight=\dimen158
+\extrarowheight=\dimen156
 \NC@list=\toks23
 \extratabsurround=\skip54
 \backup@length=\skip55
@@ -269,38 +245,29 @@ Package: lastpage 2021/09/03 v1.2n Refers to last page's name (HMM; JPG)
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count274
 )
-<<<<<<< HEAD
-(c:/texlive/2022/texmf-dist/tex/latex/tabularray/tabularray.sty
-(c:/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2022-11-02 L3 programming layer (loader) 
-
-(c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
-=======
 (d:/texlive/2022/texmf-dist/tex/latex/tabularray/tabularray.sty
 (d:/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2022-09-28 L3 programming layer (loader) 
 
 (d:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
 \l__color_backend_stack_int=\count275
 \l__pdf_internal_box=\box57
 ))
-Package: tabularray 2022-11-01 v2022D Typeset tabulars and arrays with LaTeX3
+Package: tabularray 2022-07-01 v2022C Typeset tabulars and arrays with LaTeX3
 \l__tblr_a_int=\count276
 \l__tblr_c_int=\count277
 \l__tblr_r_int=\count278
-\l__tblr_d_dim=\dimen159
-\l__tblr_h_dim=\dimen160
-\l__tblr_o_dim=\dimen161
-\l__tblr_p_dim=\dimen162
-\l__tblr_q_dim=\dimen163
-\l__tblr_r_dim=\dimen164
-\l__tblr_s_dim=\dimen165
-\l__tblr_t_dim=\dimen166
-\l__tblr_v_dim=\dimen167
-\l__tblr_w_dim=\dimen168
+\l__tblr_d_dim=\dimen157
+\l__tblr_h_dim=\dimen158
+\l__tblr_o_dim=\dimen159
+\l__tblr_p_dim=\dimen160
+\l__tblr_q_dim=\dimen161
+\l__tblr_r_dim=\dimen162
+\l__tblr_s_dim=\dimen163
+\l__tblr_t_dim=\dimen164
+\l__tblr_v_dim=\dimen165
+\l__tblr_w_dim=\dimen166
 \l__tblr_a_box=\box58
 \l__tblr_b_box=\box59
 \l__tblr_c_box=\box60
@@ -310,10 +277,10 @@ Package: tabularray 2022-11-01 v2022D Typeset tabulars and arrays with LaTeX3
 \c@colnum=\count281
 \c@rowcount=\count282
 \c@colcount=\count283
-\abovesep=\dimen169
-\belowsep=\dimen170
-\leftsep=\dimen171
-\rightsep=\dimen172
+\abovesep=\dimen167
+\belowsep=\dimen168
+\leftsep=\dimen169
+\rightsep=\dimen170
 \g_tblr_level_int=\count284
 \g__tblr_data_row_key_count_int=\count285
 \g__tblr_data_column_key_count_int=\count286
@@ -324,27 +291,27 @@ Package: tabularray 2022-11-01 v2022D Typeset tabulars and arrays with LaTeX3
 \l__tblr_key_quotient_two_int=\count291
 \l__tblr_key_remainder_int=\count292
 \g__tblr_data_str_value_count_int=\count293
-\rulewidth=\dimen173
-\l__tblr_strut_dp_dim=\dimen174
-\l__tblr_strut_ht_dim=\dimen175
-\g__tblr_cell_wd_dim=\dimen176
-\g__tblr_cell_ht_dim=\dimen177
-\g__tblr_cell_head_dim=\dimen178
-\g__tblr_cell_foot_dim=\dimen179
-\l__column_target_dim=\dimen180
+\rulewidth=\dimen171
+\l__tblr_strut_dp_dim=\dimen172
+\l__tblr_strut_ht_dim=\dimen173
+\g__tblr_cell_wd_dim=\dimen174
+\g__tblr_cell_ht_dim=\dimen175
+\g__tblr_cell_head_dim=\dimen176
+\g__tblr_cell_foot_dim=\dimen177
+\l__column_target_dim=\dimen178
 \l__tblr_caption_box=\box62
 \l__tblr_caption_left_box=\box63
 \l__tblr_row_head_box=\box64
 \l__tblr_row_foot_box=\box65
-\l__tblr_row_head_foot_dim=\dimen181
-\tablewidth=\dimen182
+\l__tblr_row_head_foot_dim=\dimen179
+\tablewidth=\dimen180
 \l__tblr_table_firsthead_box=\box66
 \l__tblr_table_middlehead_box=\box67
 \l__tblr_table_lasthead_box=\box68
 \l__tblr_table_firstfoot_box=\box69
 \l__tblr_table_middlefoot_box=\box70
 \l__tblr_table_lastfoot_box=\box71
-\l__tblr_remain_height_dim=\dimen183
+\l__tblr_remain_height_dim=\dimen181
 \l__tblr_long_from_int=\count294
 \l__tblr_long_to_int=\count295
 \l__tblr_curr_i_int=\count296
@@ -352,30 +319,30 @@ Package: tabularray 2022-11-01 v2022D Typeset tabulars and arrays with LaTeX3
 \l__tblr_table_page_int=\count298
 \l__tblr_table_head_box=\box72
 \l__tblr_table_foot_box=\box73
-\l__tblr_table_head_foot_dim=\dimen184
-\l__tblr_table_head_body_foot_dim=\dimen185
+\l__tblr_table_head_foot_dim=\dimen182
+\l__tblr_table_head_body_foot_dim=\dimen183
 \l__tblr_table_box=\box74
 \l__tblr_table_hlines_box=\box75
 \l__tblr_hline_box=\box76
 \l__tblr_row_box=\box77
-\l__tblr_col_o_wd_dim=\dimen186
-\l__tblr_col_b_wd_dim=\dimen187
-\l__tblr_hline_leftskip_dim=\dimen188
-\l__tblr_hline_rightskip_dim=\dimen189
-\l__tblr_row_ht_dim=\dimen190
-\l__tblr_row_dp_dim=\dimen191
-\l__tblr_row_abovesep_dim=\dimen192
-\l__tblr_row_belowsep_dim=\dimen193
+\l__tblr_col_o_wd_dim=\dimen184
+\l__tblr_col_b_wd_dim=\dimen185
+\l__tblr_hline_leftskip_dim=\dimen186
+\l__tblr_hline_rightskip_dim=\dimen187
+\l__tblr_row_ht_dim=\dimen188
+\l__tblr_row_dp_dim=\dimen189
+\l__tblr_row_abovesep_dim=\dimen190
+\l__tblr_row_belowsep_dim=\dimen191
 \l__tblr_row_vlines_box=\box78
 \l__tblr_vline_box=\box79
 \l__tblr_cell_box=\box80
-\l__row_upper_dim=\dimen194
-\l__row_lower_dim=\dimen195
-\l__row_vpace_dim=\dimen196
-\l__tblr_vline_aboveskip_dim=\dimen197
-\l__tblr_vline_belowskip_dim=\dimen198
-\l__tblr_cell_wd_dim=\dimen199
-\l__tblr_cell_ht_dim=\dimen256
+\l__row_upper_dim=\dimen192
+\l__row_lower_dim=\dimen193
+\l__row_vpace_dim=\dimen194
+\l__tblr_vline_aboveskip_dim=\dimen195
+\l__tblr_vline_belowskip_dim=\dimen196
+\l__tblr_cell_wd_dim=\dimen197
+\l__tblr_cell_ht_dim=\dimen198
 \l__tblr_diag_box=\box81
 )
 (d:/texlive/2022/texmf-dist/tex/latex/graphics/color.sty
@@ -388,6 +355,8 @@ Package color Info: Driver file: pdftex.def on input line 149.
 
 (d:/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+\stockwidth=\dimen199
+\stockheight=\dimen256
 )
 (d:/texlive/2022/texmf-dist/tex/latex/graphics/mathcolor.ltx))
 (d:/texlive/2022/texmf-dist/tex/latex/colortbl/colortbl.sty
@@ -395,13 +364,8 @@ Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
 \everycr=\toks24
 \minrowclearance=\skip56
 )
-<<<<<<< HEAD
-(c:/texlive/2022/texmf-dist/tex/latex/adjustbox/adjustbox.sty
-Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
-=======
 (d:/texlive/2022/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
 
 (d:/texlive/2022/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
@@ -439,13 +403,8 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 \Gin@req@height=\dimen257
 \Gin@req@width=\dimen258
 )
-<<<<<<< HEAD
-(c:/texlive/2022/texmf-dist/tex/latex/collectbox/collectbox.sty
-Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
-=======
 (d:/texlive/2022/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
 \collectedbox=\box82
 )
 \tc@llx=\dimen259
@@ -466,13 +425,8 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 \adjbox@pdepth=\dimen269
 \adjbox@ptotalheight=\dimen270
 
-<<<<<<< HEAD
-(c:/texlive/2022/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
-Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-=======
 (d:/texlive/2022/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
 \c@checkoddpage=\count300
 )
 (d:/texlive/2022/texmf-dist/tex/latex/varwidth/varwidth.sty
@@ -1019,12 +973,8 @@ LaTeX Warning: Label `fig:arhitektura' multiply defined.
 LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 85.
 LaTeX Font Info:    Trying to load font information for OML+jkp on input line 8
 5.
-<<<<<<< HEAD
 
-(c:/texlive/2022/texmf-dist/tex/latex/kpfonts/omljkp.fd
-=======
- (d:/texlive/2022/texmf-dist/tex/latex/kpfonts/omljkp.fd
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
+(d:/texlive/2022/texmf-dist/tex/latex/kpfonts/omljkp.fd
 File: omljkp.fd 2006/08/15 v1.0
 )
 LaTeX Font Info:    ... okay on input line 85.
@@ -1173,7 +1123,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 ...{Indeks slika i dijagrama}{40}{chapter*.5}
+l.29 ...{Indeks slika i dijagrama}{43}{chapter*.5}
                                                   % [1
 
 ])
@@ -1723,6 +1673,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [20]
+Overfull \hbox (24.19322pt too wide) in paragraph at lines 615--616
+[]\OT1/jkp/m/n/12 Sustav iz-ba-cuje ko-ris-nika iz tre-nutne ekipe i []salje ob
+a-vi-jest os-ta-lim []clanovima
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1741,6 +1696,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [22]
+Overfull \hbox (3.57724pt too wide) in paragraph at lines 770--771
+[]\OT1/jkp/m/n/12 Administrator bira ko-ris-nika ko-jem []zeli do-di-je-liti ad
+-mi-nis-tra-tor-ska prava 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1759,7 +1719,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 766--767
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 870--871
 
  []
 
@@ -1771,8 +1740,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 773--774
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 877--878
 
  []
 
@@ -1785,12 +1754,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[26]
+[27]
 \openout2 = `Arhitektura.aux'.
 
  (./Arhitektura.tex
 Poglavlje 4.
-<slike/arhitektura.PNG, id=444, 353.52075pt x 238.491pt>
+<slike/arhitektura.PNG, id=458, 353.52075pt x 238.491pt>
 File: slike/arhitektura.PNG Graphic file (type png)
 <use slike/arhitektura.PNG>
 Package pdftex.def Info: slike/arhitektura.PNG  used on input line 5.
@@ -1809,7 +1778,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[27
+[28
 
 
 
@@ -1855,7 +1824,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[28]
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
@@ -1902,8 +1871,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-<<<<<<< HEAD
-[28]
+[30]
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -1927,25 +1895,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 > Step: parse table inner spec.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
-=======
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
 
 Overfull \hbox (1.75291pt too wide) in paragraph at lines 153--153
 []\OT1/jkp/m/n/12 GEOGRAPHY  
@@ -1960,18 +1909,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-<<<<<<< HEAD
-[29]
+[31]
 Overfull \hbox (1.75291pt too wide) in paragraph at lines 153--153
 []\OT1/jkp/m/n/12 GEOGRAPHY  
-=======
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
  []
 
-<slike/er.png, id=453, 988.69376pt x 648.4225pt>
+<slike/er.png, id=482, 988.69376pt x 648.4225pt>
 File: slike/er.png Graphic file (type png)
 <use slike/er.png>
 Package pdftex.def Info: slike/er.png  used on input line 163.
@@ -1984,8 +1927,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-<<<<<<< HEAD
-[30
+[32
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -2008,10 +1950,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 177--178
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 179--180
-=======
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
 
  []
 
@@ -2023,8 +1961,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-<<<<<<< HEAD
-[31]
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
@@ -2037,7 +1974,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[32]
+[34]
 Underfull \hbox (badness 10000) in paragraph at lines 199--200
 
  []
@@ -2050,12 +1987,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[33]
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 206--207
-=======
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
 
  []
 
@@ -2068,11 +2001,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-<<<<<<< HEAD
-[34]
-=======
-[33]
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
+[36]
 \openout2 = `Implementacija.aux'.
 
  (./Implementacija.tex
@@ -2090,11 +2019,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-<<<<<<< HEAD
-[35
-=======
-[34
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
+[37
 
 
 
@@ -2117,11 +2042,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-<<<<<<< HEAD
-[36]
-=======
-[35]
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
+[38]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2130,11 +2051,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-<<<<<<< HEAD
-[37]
-=======
-[36]
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
@@ -2147,11 +2064,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-<<<<<<< HEAD
-[38])
-=======
-[37])
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
+[40])
 \openout2 = `Zakljucak.aux'.
 
  (./Zakljucak.tex
@@ -2169,11 +2082,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-<<<<<<< HEAD
-[39
-=======
-[38
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
+[41
 
 
 
@@ -2202,11 +2111,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-<<<<<<< HEAD
-[40
-=======
-[39
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
+[42
 
 
 
@@ -2224,11 +2129,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-<<<<<<< HEAD
-[41
-=======
-[40
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
+[43
 
 
 
@@ -2248,11 +2149,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-<<<<<<< HEAD
-[42
-=======
-[41
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
+[44
 
 
 ]
@@ -2276,11 +2173,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-<<<<<<< HEAD
-[43]
-=======
-[42]
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
+[45]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2289,11 +2182,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-<<<<<<< HEAD
-[44]
-=======
-[43]
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
+[46]
 Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
@@ -2307,11 +2196,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-<<<<<<< HEAD
-[45] 
-=======
-[44] 
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
+[47] 
 AED: lastpage setting LastPage
 (./PROGI_ProjektnaDokumentacija.aux (./Dnevnik_promjena_dokumentacije.aux)
 (./Opis_projektnog_zadatka.aux) (./Specifikacija_programske_potpore.aux)
@@ -2325,19 +2210,11 @@ anged.
 (rerunfilecheck)             Checksum: 73DC96050B1C6E228BBC05CE1994BB16;4565.
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 17850 strings out of 474971
- 316257 string characters out of 5780121
- 810330 words of memory out of 5000000
- 38782 multiletter control sequences out of 15000+600000
+ 17856 strings out of 475071
+ 316198 string characters out of 5782907
+ 807717 words of memory out of 5000000
+ 38668 multiletter control sequences out of 15000+600000
  537911 words of font info for 175 fonts, out of 8000000 for 9000
-=======
- 17820 strings out of 475071
- 315617 string characters out of 5782907
- 799831 words of memory out of 5000000
- 38647 multiletter control sequences out of 15000+600000
- 532166 words of font info for 160 fonts, out of 8000000 for 9000
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
  1141 hyphenation exceptions out of 8191
  84i,12n,116p,1639b,1046s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -2351,19 +2228,10 @@ type1/public/kpfonts/jkpbn8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public
 t8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmn8a.pfb><d:/
 texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpsy.pfb><d:/texlive/2022/t
 exmf-dist/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-<<<<<<< HEAD
-Output written on PROGI_ProjektnaDokumentacija.pdf (46 pages, 843984 bytes).
+Output written on PROGI_ProjektnaDokumentacija.pdf (48 pages, 848328 bytes).
 PDF statistics:
- 649 PDF objects out of 1000 (max. 8388607)
- 573 compressed objects within 6 object streams
- 220 named destinations out of 1000 (max. 500000)
+ 681 PDF objects out of 1000 (max. 8388607)
+ 602 compressed objects within 7 object streams
+ 240 named destinations out of 1000 (max. 500000)
  237 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
-Output written on PROGI_ProjektnaDokumentacija.pdf (45 pages, 782745 bytes).
-PDF statistics:
- 650 PDF objects out of 1000 (max. 8388607)
- 577 compressed objects within 6 object streams
- 227 named destinations out of 1000 (max. 500000)
- 232 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> 86663f49ae2a48b38f0aedaf50902f8c4bea8bfd
 
