@@ -55,26 +55,115 @@ Backend se sastoji od:
 
 				\textit{Svaku tablicu je potrebno opisati po zadanom predlošku. Lijevo se nalazi točno ime varijable u bazi podataka, u sredini se nalazi tip podataka, a desno se nalazi opis varijable. Svjetlozelenom bojom označite primarni ključ. Svjetlo plavom označite strani ključ}
 				
+			
+				\begin{longtblr} [
+					label = none,
+					entry = none
+					] {
+						width = \textwidth,
+						colspec = {|X[6,l]|X[6, l]|X[20, l]|},
+						rowhead = 1,
+					}
+					\hline \textbf{Korisnik} & \\ \hline[3pt]
+					\SetCell{LightGreen}nadimak & VARCHAR & Nadimak si odabere korisnik pri registraciji, predstavlja njegov primarni ključ. \\ \hline
+					ime & VARCHAR & Ime korisnika. \\ \hline
+					prezime & VARCHAR & Prezime korisnika. \\ \hline
+					email adresa & VARCHAR & E-mail adresa korisnika. \\ \hline
+					lozinka & VARCHAR & Lozinka koju korisnik osmisli pri registraciji. \\ \hline
+					slika & VARBINARY & Profilna slika korisnika u aplikaciji, opcionalno. \\ \hline
+					broj telefona & INT & Broj telefona korisnika, opcionalno. \\ \hline
+				\end{longtblr}
+
 				\begin{longtblr}[
-					label=none,
-					entry=none
+					label = none,
+					entry = none
+				]{
+					width = \textwidth,
+					colspec = {|X[6,l]|X[6, l]|X[20, l]|},
+					rowhead = 1,
+                         		}
+				\hline \textbf{Administrator} & \\ \hline[3pt]
+				\SetCell{LightBlue} nadimak & VARCHAR & Administrator je specijalizacija od korisnika, povlači njegov primarni ključ, nadimak. \\ \hline
+				\end{longtblr}
+
+
+
+			
+				\begin{longtblr}[
+					label = none, 
+					entry = none
 					]{
 						width = \textwidth,
-						colspec={|X[6,l]|X[6, l]|X[20, l]|}, 
+						colspec = {|X[6,l]|X[6, l]|X[20, l]|},
 						rowhead = 1,
-					} %definicija širine tablice, širine stupaca, poravnanje i broja redaka naslova tablice
-					\hline \textbf{korisnik - ime tablice} & \\ \hline[3pt]
-					\SetCell{LightGreen}IDKorisnik & INT	&  	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  	\\ \hline
-					korisnickoIme	& VARCHAR &   	\\ \hline 
-					email & VARCHAR &   \\ \hline 
-					ime & VARCHAR	&  		\\ \hline 
-					\SetCell{LightBlue} primjer	& VARCHAR &   	\\ \hline 
+					}
+					\hline \textbf{Sastavljač} & \\ \hline[3pt]
+					\SetCell{LightBlue} nadimak & VARCHAR & Sastavljač je specijalizacija od korisnika, povlači njegov primarni ključ, nadimak. \\ \hline
+					prosječan broj ekipa & FLOAT & Opisuje prosječan broj ekipa na kvizovima pojedinog sastavljača. \\ \hline
 				\end{longtblr}
+			
+				\begin{longtblr} [
+					label = none, 
+					entry = none
+					]{
+						width = \textwidth,
+						colspec = {|X[6,l]|X[6, l]|X[20, l]|},
+						rowhead = 1,
+					}
+					\hline \textbf{Igrač} & \\ \hline[3pt]
+					\SetCell{LightBlue} nadimak & VARCHAR & Igrač je specijalizacija od korisnika, povlači njegov primarni ključ, nadimak. \\ \hline
+					\SetCell{LightBlue} naziv ekipe & VARCHAR & Naziv ekipe je opcionalan, strani ključ koji referencira tablicu Ekipa. \\ \hline
+					područja znanja & VARCHAR & Tekst o područjima znanja igrača, primjenjuje se na pronalaženje ekipe. \\ \hline
+				\end{longtblr}
+			
+			\begin{longtblr} [
+				label = none,
+				entry = none
+				]{
+					width = \textwidth,
+					colspec = {|X[6,l]|X[6, l]|X[20, l]|},
+					rowhead = 1,
+				}
+			\hline \textbf{Ekipa} & \\ \hline[3pt]
+			\SetCell{LightGreen} naziv ekipe & VARCHAR & Predstavlja ime ekipe, primarni ključ. \\ \hline
+			broj članova & INT & Broj članova ekipe, ne smije biti NULL ni veći od 5. \\ \hline
+			\end{longtblr}
+
+			
+
+			\begin{longtblr}[
+				label = none,
+				entry = none
+			]{
+				width = \textwidth,
+				colspec = {|X[6,l]|X[6, l]|X[20, l]|},
+				rowhead = 1,
+			}
+			\hline \textbf{Kviz} & \\ \hline[3pt]
+			\SetCell{LightGreen}naziv kviza & VARCHAR & Primarni ključ, ime kviza. \\ \hline
+			kratki opis & VARCHAR & Sažete informacije o kvizu. \\ \hline
+			ime kafića & VARCHAR & Ime kafića u kojem se održava kviz. \\ \hline
+			vrijeme održavanja (U) & TIMESTAMP & Vrijeme održavanja kviza, unique zajedno s nadimkom jer se u isto vrijeme ne mogu održati dva kviza 			istog sastavljača. \\ \hline
+			maks. broj ekipa & INT & Maksimala broj ekipa koje mogu sudjelovati. \\ \hline
+			lokacija & GEOGRAPHY & Lokacija kafića. \\ \hline
+			kotizacija & FLOAT & Kotizacija za sudjelovanje na kvizu. \\ \hline
+			nagrade & VARCHAR & Lista nagrada za visoko rangirane ekipe. \\ \hline
+			vrsta & VARCHAR & Tema kviza (sport, povijest, ...). \\ \hline
+			\SetCell{LightBlue}nadimak (U) & VARCHAR & Nadimak sastavljača kviza, strani ključ sa referencom na sastavljača i unique zajedno s 						vremenom održavanja. \\ \hline
+			\end{longtblr}
+			
+			
 				
 				
 			
 			\subsection{Dijagram baze podataka}
 				\textit{ U ovom potpoglavlju potrebno je umetnuti dijagram baze podataka. Primarni i strani ključevi moraju biti označeni, a tablice povezane. Bazu podataka je potrebno normalizirati. Podsjetite se kolegija "Baze podataka".}
+			 \begin{figure}[!h]
+			\centering
+			\includegraphics[width=15cm]{slike/er.png} 
+			\caption{ER dijagram}
+			\label{fig:arhitektura}
+	\end{figure}
 			
 			\eject
 			
