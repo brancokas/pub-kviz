@@ -19,7 +19,7 @@
 					\item Igrač kviza
 					\item Sastavljač kviza
 				\end{packed_enum}				
-				\item Administrator
+				\item Administratori
 				\item Razvojni tim
 				
 			\end{packed_enum}
@@ -107,7 +107,7 @@
 				\noindent \underbar{\textbf{UC$$01$$ - $$Pregled naslovnice$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Neregistrirani korisnik, korisnik
+					\item \textbf{Glavni sudionik:} Neregistrirani korisnik, registrirani korisnik
 					\item  \textbf{Cilj:} Pregledati naslovnicu aplikacije
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik nije prijavljen u sustav
@@ -167,7 +167,7 @@
 				\noindent \underbar{\textbf{UC$$03$$ - $$Prijava u sustav$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik
+					\item \textbf{Glavni sudionik:} Registrirani korisnik
 					\item  \textbf{Cilj:} Pristupiti korisničkom sučelju
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik je registriran u sustav
@@ -196,7 +196,7 @@
 				\noindent \underbar{\textbf{UC$$04$$ - $$Pregled podataka korisničkog profila$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik
+					\item \textbf{Glavni sudionik:} Registrirani korisnik
 					\item  \textbf{Cilj:} Pregledati podatke korisničkog profila
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
@@ -214,7 +214,7 @@
 				\noindent \underbar{\textbf{UC$$05$$ - $$Uređivanje podataka korisničkog profila$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik
+					\item \textbf{Glavni sudionik:} Registrirani korisnik
 					\item  \textbf{Cilj:} Urediti podatke korisničkog profila
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
@@ -247,7 +247,7 @@
 				\noindent \underbar{\textbf{UC$$06$$ - $$Kreiranje nadolazećih događaja$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik (Sastavljač kviza)
+					\item \textbf{Glavni sudionik:} Registrirani korisnik (Sastavljač kviza)
 					\item  \textbf{Cilj:} Kreirati nove događaje
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
@@ -319,7 +319,7 @@
 				\noindent \underbar{\textbf{UC$$09$$ - $$Pregled svih objavljenih događaja$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik
+					\item \textbf{Glavni sudionik:} Registrirani korisnik
 					\item  \textbf{Cilj:} Pregledati sve događaje koji su objavljeni
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
@@ -350,7 +350,7 @@
 				\noindent \underbar{\textbf{UC$$10$$ - $$Pregled svojih objavljenih događaja$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik (Sastavljač kviza)
+					\item \textbf{Glavni sudionik:} Registrirani korisnik (Sastavljač kviza)
 					\item  \textbf{Cilj:} Pregledati svoje objavljene događaje
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
@@ -380,7 +380,7 @@
 				\noindent \underbar{\textbf{UC$$11$$ - $$Pregled prijava za objavljene događaje$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik (Igrač)
+					\item \textbf{Glavni sudionik:} Registrirani korisnik (Igrač kviza)
 					\item  \textbf{Cilj:} Pregledati događaje na koje je korisnik prijavljen
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
@@ -411,7 +411,7 @@
 				\noindent \underbar{\textbf{UC$$12$$ - $$Pregled detalja objavljenog događaja$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik
+					\item \textbf{Glavni sudionik:} Registrirani korisnik
 					\item  \textbf{Cilj:} Pregledati detalje o objavljenom događaju
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
@@ -440,29 +440,10 @@
 				\end{packed_item}
 				
 				
-				\noindent \underbar{\textbf{UC$$13$$ - $$Pregled reduciranih detalja objavljenog događaja$$}}
+				\noindent \underbar{\textbf{UC$$13$$ - $$Pretraživanje objavljenih događaja$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Neregistrirani korisnik
-					\item  \textbf{Cilj:} Pregledati detalje o objavljenom događaju
-					\item  \textbf{Sudionici:} Baza podataka
-					\item  \textbf{Preduvjet:} -
-					\item  \textbf{Opis osnovnog tijeka:}
-					
-					\item[] \begin{packed_enum}
-						
-						\item Korisnik bira opciju za pregled detalja nekog događaja
-						\item Korisnik pregledava samo reducirane detalje događaja
-						
-					\end{packed_enum}
-					
-				\end{packed_item}
-				
-				
-				\noindent \underbar{\textbf{UC$$14$$ - $$Pretraživanje objavljenih događaja$$}}
-				\begin{packed_item}
-					
-					\item \textbf{Glavni sudionik:} Korisnik
+					\item \textbf{Glavni sudionik:} Registrirani korisnik
 					\item  \textbf{Cilj:} Na lakši način pronaći željeni događaj
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
@@ -490,10 +471,10 @@
 				\end{packed_item}
 				
 				
-				\noindent \underbar{\textbf{UC$$15$$ - $$Filtriranje objavljenih događaja$$}}
+				\noindent \underbar{\textbf{UC$$14$$ - $$Filtriranje objavljenih događaja$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik
+					\item \textbf{Glavni sudionik:} Registrirani korisnik
 					\item  \textbf{Cilj:} Pronaći događaj koji najviše odgovara korisniku
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
@@ -521,10 +502,10 @@
 				\end{packed_item}
 				
 				
-				\noindent \underbar{\textbf{UC$$16$$ - $$Pronalazak ekipe za kviz$$}}
+				\noindent \underbar{\textbf{UC$$15$$ - $$Pronalazak ekipe za kviz$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik (Igrač)
+					\item \textbf{Glavni sudionik:} Registrirani korisnik (Igrač kviza)
 					\item  \textbf{Cilj:} Pronaći ekipu za sudjelovanje na događajima
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
@@ -561,10 +542,10 @@
 				\end{packed_item}
 				
 				
-				\noindent \underbar{\textbf{UC$$17$$ - $$Pregled obavijesti o pronađenoj ekipi$$}}
+				\noindent \underbar{\textbf{UC$$16$$ - $$Pregled obavijesti o pronađenoj ekipi$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik (Igrač kviza)
+					\item \textbf{Glavni sudionik:} Registrirani korisnik (Igrač kviza)
 					\item  \textbf{Cilj:} Pregledati obavijest o pronalasku ekipe
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav, prethodno je odabrao opciju za pronalazak ekipe i dodan je u neku ekipu
@@ -580,10 +561,10 @@
 				\end{packed_item}
 				
 				
-				\noindent \underbar{\textbf{UC$$18$$ - $$Pregled obavijesti o novom članu ekipe$$}}
+				\noindent \underbar{\textbf{UC$$17$$ - $$Pregled obavijesti o novom članu ekipe$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik (Igrač kviza)
+					\item \textbf{Glavni sudionik:} Registrirani korisnik (Igrač kviza)
 					\item  \textbf{Cilj:} Pregledati obavijest o dodavanju novog člana u ekipu
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav i pripada ekipi u koju je dodan neki novi član
@@ -599,10 +580,10 @@
 				\end{packed_item}
 				
 				
-				\noindent \underbar{\textbf{UC$$19$$ - $$Napuštanje ekipe$$}}
+				\noindent \underbar{\textbf{UC$$18$$ - $$Napuštanje ekipe$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik (Igrač kviza)
+					\item \textbf{Glavni sudionik:} Registrirani korisnik (Igrač kviza)
 					\item  \textbf{Cilj:} Napustiti trenutnu ekipu
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Igrač je prijavljen u sustav i trenutno se nalazi u nekoj ekipi
@@ -632,10 +613,10 @@
 				\end{packed_item}
 				
 				
-				\noindent \underbar{\textbf{UC$$20$$ - $$Pregled obavijesti o napuštanju člana ekipe$$}}
+				\noindent \underbar{\textbf{UC$$19$$ - $$Pregled obavijesti o napuštanju člana ekipe$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik (Igrač  kviza)
+					\item \textbf{Glavni sudionik:} Registrirani korisnik (Igrač  kviza)
 					\item  \textbf{Cilj:} Pregledati obavijest o napuštanju člana ekipe
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
@@ -650,10 +631,10 @@
 				\end{packed_item}
 				
 				
-				\noindent \underbar{\textbf{UC$$21$$ - $$Prijava ekipe na događaj$$}}
+				\noindent \underbar{\textbf{UC$$20$$ - $$Prijava ekipe na događaj$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik (Igrač kviza)
+					\item \textbf{Glavni sudionik:} Registrirani korisnik (Igrač kviza)
 					\item  \textbf{Cilj:} Prijaviti ekipu na događaj
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
@@ -664,7 +645,7 @@
 						\item Korisnik pregledava sve objavljene događaje
 						\item Korisnik odabire događaj na koji želi prijaviti ekipu
 						\item Korisnik prijavljuje ekipu na događaj
-						\item Ažurira se baza podataka
+						\item Baza podataka se ažurira
 					\end{packed_enum}
 					
 					\item  \textbf{Opis mogućih odstupanja:}
@@ -683,10 +664,10 @@
 				\end{packed_item}
 				
 				
-				\noindent \underbar{\textbf{UC$$22$$ - $$Pregled obavijesti o prijavi na događaj$$}}
+				\noindent \underbar{\textbf{UC$$21$$ - $$Pregled obavijesti o prijavi na događaj$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik (Igrač kviza)
+					\item \textbf{Glavni sudionik:} Registrirani korisnik (Igrač kviza)
 					\item  \textbf{Cilj:} Pregledati obavijest o prijavi na događaj
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
@@ -701,7 +682,7 @@
 				\end{packed_item}
 				
 				
-				\noindent \underbar{\textbf{UC$$23$$ - $$Blokiranje korisnika$$}}
+				\noindent \underbar{\textbf{UC$$22$$ - $$Blokiranje korisnika$$}}
 				\begin{packed_item}
 					
 					\item \textbf{Glavni sudionik:} Administrator
@@ -716,13 +697,13 @@
 						\item Administrator odabire opciju blokiranja korisnika
 						\item Administrator pronalazi željenog korisnika
 						\item Administrator blokira korisnika
-						\item Ažurira se baza podataka
+						\item Baza podataka se ažurira
 					\end{packed_enum}
 					
 				\end{packed_item}
 				
 				
-				\noindent \underbar{\textbf{UC$$24$$ - $$Brisanje objavljenih događaja$$}}
+				\noindent \underbar{\textbf{UC$$23$$ - $$Brisanje objavljenih događaja$$}}
 				\begin{packed_item}
 					
 					\item \textbf{Glavni sudionik:} Administrator
@@ -737,7 +718,7 @@
 						\item Administrator odabire opciju brisanja događaja
 						\item Administrator odabire događaj koji želi obrisati
 						\item Administrator briše događaj
-						\item Događaj se briše iz baze podataka
+						\item Baza podataka se ažurira
 					\end{packed_enum}
 					
 					\item  \textbf{Opis mogućih odstupanja:}
@@ -755,7 +736,7 @@
 				\end{packed_item}
 				
 				
-				\noindent \underbar{\textbf{UC$$25$$ - $$Dodjela administratorskih prava korisniku$$}}
+				\noindent \underbar{\textbf{UC$$24$$ - $$Dodjela administratorskih prava korisniku$$}}
 				\begin{packed_item}
 					
 					\item \textbf{Glavni sudionik:} Administrator
@@ -775,10 +756,10 @@
 				\end{packed_item}
 				
 				
-				\noindent \underbar{\textbf{UC$$26$$ - $$Pregled profila sastavljača$$}}
+				\noindent \underbar{\textbf{UC$$25$$ - $$Pregled profila sastavljača$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik
+					\item \textbf{Glavni sudionik:} Registrirani korisnik
 					\item  \textbf{Cilj:} Pregledati podatke profila sastavljača
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
@@ -808,10 +789,10 @@
 				\end{packed_item}
 				
 				
-				\noindent \underbar{\textbf{UC$$27$$ - $$Pregled statistike$$}}
+				\noindent \underbar{\textbf{UC$$26$$ - $$Pregled statistike$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik (Igrač kviza)
+					\item \textbf{Glavni sudionik:} Registrirani korisnik (Igrač kviza)
 					\item  \textbf{Cilj:} Pregledati statistiku 
 					\item  \textbf{Sudionici:} Baza podataka
 					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
@@ -838,12 +819,12 @@
 				\end{packed_item}
 				
 				
-				\noindent \underbar{\textbf{UC$$28$$ - $$Odjava iz sustava$$}}
+				\noindent \underbar{\textbf{UC$$27$$ - $$Odjava iz sustava$$}}
 				\begin{packed_item}
 					
-					\item \textbf{Glavni sudionik:} Korisnik
+					\item \textbf{Glavni sudionik:} Registrirani korisnik
 					\item  \textbf{Cilj:} Odjaviti se iz sustava
-					\item  \textbf{Sudionici:} Baza podataka
+					\item  \textbf{Sudionici:} -
 					\item  \textbf{Preduvjet:} Korisnik je prijavljen u sustav
 					\item  \textbf{Opis osnovnog tijeka:}
 					
