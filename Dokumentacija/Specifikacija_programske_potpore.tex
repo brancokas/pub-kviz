@@ -866,21 +866,35 @@
 				
 				\textbf{\textit{dio 1. revizije}}\\
 				
-				\textit{Nacrtati sekvencijske dijagrame koji modeliraju najvažnije dijelove sustava (max. 4 dijagrama). Ukoliko postoji nedoumica oko odabira, razjasniti s asistentom. Uz svaki dijagram napisati detaljni opis dijagrama.}
+				\textit{Nacrtati sekvencijske dijagrame koji modeliraju najvažnije dijelove sustava (max. 4 dijagrama). Ukoliko postoji nedoumica oko odabira, razjasniti s asistentom. Uz svaki dijagram napisati detaljni opis dijagrama.}\\
 				
 				
+				
+				\textbf{Obrazac uporabe UC2 - Registracija}\\
+				
+				Neregistrirani korisnik šalje zahtjev za registracijskom stranicom. Web aplikacija korisniku dohvaća stranicu i prikazuje na ekranu sva registracijska polja. Nakon što neregistrirani korisnik popuni sva polja i preda ih, server dohvaća sve nadimke i e-mailove od baze podataka, kako bi provjerio validnost predanih podataka. Ukoliko neko od polja nije ispunjeno, lozinka ne zadovoljava uvjete i korisničko ime je već zauzeto, podatci nisu validni i onda server obavještava neregistriranog korisnika o grešci. Ako su podatci validni, server pohranjuje novog korisnika u bazu podataka. Nakon toga web aplikacija dohvaća početnu stranicu i prikazuje ju korisniku.
+				
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{dijagrami/SeqDiagram1.PNG} 
+					\caption{Sekvencijski dijagram, registracija korisnika}
+					\label{fig:SeqDiagram1}
+				\end{figure}
+				
+				
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{dijagrami/SekvencijskiKreiranjeDogadaja.PNG} 
+					\caption{Sekvencijski dijagram, kreiranje događaja}
+					\label{fig:SeqDiagram2}
+				\end{figure}
+				
+				\eject
 				
 				\begin{figure}[H]
 					\includegraphics[width=\textwidth]{dijagrami/SeqDiagram3.PNG} 
 					\caption{Sekvencijski dijagram, pronalazak ekipe}
-					\label{fig:UseCaseDiagram3}
+					\label{fig:SeqDiagram3}
 				\end{figure}
-
-				\begin{figure}[H]
-					\includegraphics[width=\textwidth]{dijagrami/SekvencijskiKreiranjeDogadaja.PNG} 
-					\caption{Sekvencijski dijagram, kreiranje događaja}
-					\label{fig:UseCaseDiagram3}
-				\end{figure}
+				
 				\eject
 
 	
