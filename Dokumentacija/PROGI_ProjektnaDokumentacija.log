@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.13)  9 NOV 2022 18:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.11)  9 NOV 2022 19:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1850,12 +1850,15 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.890 				\eject
                  <./dijagrami/SekvencijskiKreiranjeDogadaja.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 892--893
+
+ []
+
 <dijagrami/SeqDiagram3.PNG, id=487, 826.88925pt x 376.40625pt>
 File: dijagrami/SeqDiagram3.PNG Graphic file (type png)
 <use dijagrami/SeqDiagram3.PNG>
-Package pdftex.def Info: dijagrami/SeqDiagram3.PNG  used on input line 893.
+Package pdftex.def Info: dijagrami/SeqDiagram3.PNG  used on input line 897.
 (pdftex.def)             Requested size: 435.6108pt x 198.29396pt.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1869,9 +1872,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.898 				\eject
+l.902 				\eject
                  <./dijagrami/SeqDiagram3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 903--904
+Underfull \hbox (badness 10000) in paragraph at lines 907--908
 
  []
 
@@ -2366,7 +2369,7 @@ type1/public/kpfonts/jkpbn8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public
 t8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmn8a.pfb><c:/
 texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpsy.pfb><c:/texlive/2022/t
 exmf-dist/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on PROGI_ProjektnaDokumentacija.pdf (54 pages, 1435785 bytes).
+Output written on PROGI_ProjektnaDokumentacija.pdf (54 pages, 1436438 bytes).
 PDF statistics:
  737 PDF objects out of 1000 (max. 8388607)
  640 compressed objects within 7 object streams
