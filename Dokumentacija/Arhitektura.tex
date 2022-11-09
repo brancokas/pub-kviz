@@ -61,17 +61,21 @@ Backend se sastoji od:
 					entry = none
 					] {
 						width = \textwidth,
-						colspec = {|X[6,l]|X[6, l]|X[20, l]|},
+						colspec = {|X[8,l]|X[8, l]|X[16, l]|},
 						rowhead = 1,
 					}
 					\hline \textbf{Korisnik} & \\ \hline[3pt]
-					\SetCell{LightGreen}nadimak & VARCHAR & Nadimak si odabere korisnik pri registraciji, predstavlja njegov primarni ključ. \\ \hline
-					ime & VARCHAR & Ime korisnika. \\ \hline
-					prezime & VARCHAR & Prezime korisnika. \\ \hline
-					email adresa & VARCHAR & E-mail adresa korisnika. \\ \hline
-					lozinka & VARCHAR & Lozinka koju korisnik osmisli pri registraciji. \\ \hline
+					\SetCell{LightGreen}korisnik\_id & BIG INT & Identifikacijski broj korisnika, primarni ključ.\\ \hline
+					ime & VARCHAR(100) & Ime korisnika. \\ \hline
+					prezime & VARCHAR(100) & Prezime korisnika. \\ \hline
+					email\_adresa & VARCHAR(100) & E-mail adresa korisnika. \\ \hline
+					lozinka & VARCHAR(50) & Lozinka koju korisnik osmisli pri registraciji. \\ \hline
 					slika & VARBINARY & Profilna slika korisnika u aplikaciji, opcionalno. \\ \hline
-					broj telefona & INT & Broj telefona korisnika, opcionalno. \\ \hline
+					broj\_telefona & VARCHAR(50) & Broj telefona korisnika, opcionalno. \\ \hline
+					podrucja\_znanja & VARCHAR(150) & Područja znanja igrača, koriste se pri odabiru ekipe. \\ \hline
+					nadimak(U) & VARCHAR(50) & Nadimak koji si korisnik osmisli pri registraciji. \\ \hline
+					prosj\_broj\_ekipa & INT & Prosječan broj ekipa koji sudjeluju u kvizovima nekog sastavljača, opcionalno. \\ \hline
+					\SetCell{LightBlue}ekipa\_id & BIG INT & Identifikacijski broj ekipe kojoj korisnik pripada, opcionalno. \\ \hline
 				\end{longtblr}
 
 				\begin{longtblr}[
@@ -79,11 +83,12 @@ Backend se sastoji od:
 					entry = none
 				]{
 					width = \textwidth,
-					colspec = {|X[6,l]|X[6, l]|X[20, l]|},
+					colspec = {|X[8,l]|X[8, l]|X[16, l]|},
 					rowhead = 1,
                          		}
-				\hline \textbf{Administrator} & \\ \hline[3pt]
-				\SetCell{LightBlue} nadimak & VARCHAR & Administrator je specijalizacija od korisnika, povlači njegov primarni ključ, nadimak. \\ \hline
+				\hline \textbf{Uloga} & \\ \hline[3pt]
+				\SetCell{LightGreen} uloga\_id & BIG INT & Identifikacijski broj uloge. \\ \hline
+				uloga\_ime & VARCHAR(50) & Ime uloge. \\ \hline
 				\end{longtblr}
 
 
@@ -94,12 +99,12 @@ Backend se sastoji od:
 					entry = none
 					]{
 						width = \textwidth,
-						colspec = {|X[6,l]|X[6, l]|X[20, l]|},
+						colspec = {|X[8,l]|X[8, l]|X[16, l]|},
 						rowhead = 1,
 					}
-					\hline \textbf{Sastavljač} & \\ \hline[3pt]
-					\SetCell{LightBlue} nadimak & VARCHAR & Sastavljač je specijalizacija od korisnika, povlači njegov primarni ključ, nadimak. \\ \hline
-					prosječan broj ekipa & FLOAT & Opisuje prosječan broj ekipa na kvizovima pojedinog sastavljača. \\ \hline
+					\hline \textbf{korisnik\_uloga} & \\ \hline[3pt]
+					\SetCell{LightBlue} uloga\_id & BIG INT & Identifikacijski broj uloge, strani ključ s referencom na ulogu.\\ \hline
+					\SetCell{LightBlue} korisnik\_id & BIG INT & Identifikacijski broj korisnika, strani ključ s referencom na korisnika. \\ \hline
 				\end{longtblr}
 			
 				\begin{longtblr} [
@@ -107,13 +112,13 @@ Backend se sastoji od:
 					entry = none
 					]{
 						width = \textwidth,
-						colspec = {|X[6,l]|X[6, l]|X[20, l]|},
+						colspec = {|X[8,l]|X[8, l]|X[16, l]|},
 						rowhead = 1,
 					}
-					\hline \textbf{Igrač} & \\ \hline[3pt]
-					\SetCell{LightBlue} nadimak & VARCHAR & Igrač je specijalizacija od korisnika, povlači njegov primarni ključ, nadimak. \\ \hline
-					\SetCell{LightBlue} naziv ekipe & VARCHAR & Naziv ekipe je opcionalan, strani ključ koji referencira tablicu Ekipa. \\ \hline
-					područja znanja & VARCHAR & Tekst o područjima znanja igrača, primjenjuje se na pronalaženje ekipe. \\ \hline
+					\hline \textbf{Ekipa} & \\ \hline[3pt]
+					\SetCell{LightGreen} ekipa\_id & BIG INT & Identifikacijski broj ekipe, primarni ključ. \\ \hline
+					broj\_clanova & INT & Broj članova ekipe, ne smije biti manji od 1 ni veći od 5. \\ \hline
+					naziv\_ekipe & VARCHAR(50) & Ime ekipe. \\ \hline
 				\end{longtblr}
 			
 			\begin{longtblr} [
@@ -121,12 +126,21 @@ Backend se sastoji od:
 				entry = none
 				]{
 					width = \textwidth,
-					colspec = {|X[6,l]|X[6, l]|X[20, l]|},
+					colspec = {|X[8,l]|X[8, l]|X[16, l]|},
 					rowhead = 1,
 				}
-			\hline \textbf{Ekipa} & \\ \hline[3pt]
-			\SetCell{LightGreen} naziv ekipe & VARCHAR & Predstavlja ime ekipe, primarni ključ. \\ \hline
-			broj članova & INT & Broj članova ekipe, ne smije biti NULL ni veći od 5. \\ \hline
+			\hline \textbf{Kviz} & \\ \hline[3pt]
+			\SetCell{LightGreen} kviz\_id & BIG INT & Identifikacijski broj kviza, primarni ključ. \\ \hline
+			kratki\_opis & VARCHAR(200) & Sažeti tekst o sadržaju kviza. \\ \hline
+			ime\_kafica & VARCHAR(50) & Ime kafića u kojem se kviz održava. \\ \hline
+			vrijeme\_odrzavanja (U) & TIMESTAMP & Vrijeme održavanja kviza, unikatan atribut zajedno s identifikacijskim brojem sastavljača. \\ \hline
+			lokacija & GEOGRAPHY & Lokacija mjesta održavanja. \\ \hline
+			maks\_broj\_ekipa & INT & Maksimalni broj ekipa koje sudjeluju na kvizu. \\ \hline
+			kotizacija & FLOAT & Kotizacija za sudjelovanje na kvizu. \\ \hline
+			nagrade & VARCHAR(100) & Popis nagrada na visoko plasirane ekipe. \\ \hline
+			vrsta & VARCHAR(50) & Vrsta kviza (povijest, sport, ..). \\ \hline
+			naziv\_kviza (U) & VARCHAR(50) & Unikatan naziv kviza. \\ \hline
+			\SetCell{LightBlue} korisnik\_id & BIG INT & Identifikacijski broj sastavljača, strani ključ s referencom na korisnika. \\ \hline
 			\end{longtblr}
 
 			
@@ -136,20 +150,26 @@ Backend se sastoji od:
 				entry = none
 			]{
 				width = \textwidth,
-				colspec = {|X[6,l]|X[6, l]|X[20, l]|},
+				colspec = {|X[8,l]|X[8, l]|X[16, l]|},
 				rowhead = 1,
 			}
-			\hline \textbf{Kviz} & \\ \hline[3pt]
-			\SetCell{LightGreen}naziv kviza & VARCHAR & Primarni ključ, ime kviza. \\ \hline
-			kratki opis & VARCHAR & Sažete informacije o kvizu. \\ \hline
-			ime kafića & VARCHAR & Ime kafića u kojem se održava kviz. \\ \hline
-			vrijeme održavanja (U) & TIMESTAMP & Vrijeme održavanja kviza, unique zajedno s nadimkom jer se u isto vrijeme ne mogu održati dva kviza 			istog sastavljača. \\ \hline
-			maks. broj ekipa & INT & Maksimala broj ekipa koje mogu sudjelovati. \\ \hline
-			lokacija & GEOGRAPHY & Lokacija kafića. \\ \hline
-			kotizacija & FLOAT & Kotizacija za sudjelovanje na kvizu. \\ \hline
-			nagrade & VARCHAR & Lista nagrada za visoko rangirane ekipe. \\ \hline
-			vrsta & VARCHAR & Tema kviza (sport, povijest, ...). \\ \hline
-			\SetCell{LightBlue}nadimak (U) & VARCHAR & Nadimak sastavljača kviza, strani ključ sa referencom na sastavljača i unique zajedno s 						vremenom održavanja. \\ \hline
+			\hline \textbf{sudjeluje\_u} & \\ \hline[3pt]
+			\SetCell{LightBlue} ekipa\_id & BIG INT & Identifikacijski broj ekipe, strani ključ s referencom na ekipu. \\ \hline
+			\SetCell{LightBlue} kviz\_id & BIG INT & Identifikacijski broj kviza na kojem sudjeluje ekipa, strani ključ. \\ \hline
+			\end{longtblr}
+
+			\begin{longtblr} [
+				label = none,
+				entry = none
+			]{
+				width = \textwidth,
+				colspec = {|X[8,l]|X[8, l]|X[16, l]|},
+				rowhead = 1,
+			}
+			\hline \textbf{Obavijest}& \\ \hline[3pt]
+			\SetCell{LightGreen} obavijest\_id & BIG INT & Identifikacijski broj obavijesti, primarni ključ. \\ \hline
+			tekst & VARCHAR(300) & Tekst obavijesti. \\ \hline
+			\SetCell{LightBlue} korisnik\_id & BIG INT & Identifikacijski broj korisnika koji je primio obavijest. \\ \hline
 			\end{longtblr}
 			
 			
