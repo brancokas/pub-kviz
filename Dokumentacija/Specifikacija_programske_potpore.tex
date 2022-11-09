@@ -870,7 +870,7 @@
 				
 				
 				
-				\textbf{Obrazac uporabe UC2 - Registracija}\\
+				\textbf{Obrazac uporabe UC02 - Registracija}\\
 				
 				Neregistrirani korisnik šalje zahtjev za registracijskom stranicom. Web aplikacija korisniku dohvaća stranicu i prikazuje na ekranu sva registracijska polja. Nakon što neregistrirani korisnik popuni sva polja i preda ih, server dohvaća sve nadimke i e-mailove od baze podataka, kako bi provjerio validnost predanih podataka. Ukoliko neko od polja nije ispunjeno, lozinka ne zadovoljava uvjete i korisničko ime je već zauzeto, podatci nisu validni i onda server obavještava neregistriranog korisnika o grešci. Ako su podatci validni, server pohranjuje novog korisnika u bazu podataka. Nakon toga web aplikacija dohvaća početnu stranicu i prikazuje ju korisniku.
 				
@@ -879,10 +879,13 @@
 					\caption{Sekvencijski dijagram, registracija korisnika}
 					\label{fig:SeqDiagram1}
 				\end{figure}
+
+				\textbf{Obrazac uporabe UC06 - Kreiranje nadolazećih događaja}\\
 				
+				Registrirani korisnik(sastavljač kviza) šalje zahtjeva za stranicom za kreiranje novih događaja. Web aplikacija dohvaća stranicu i prikazuje tu stranicu na ekranu sa svim poljima koja trebaju biti popunjena. Nakon popunjavanja polja, korisnik predaje sve podatke. Nakon toga, server dohvaća sve podatke kako bi provjerio njihovu ispravnost. Ukoliko je sastavljač kviza stvorio novi događaj i održavanje novog događaja se poklapa s nekim drugim događajem koji je stvorio isti sastavljač, server obavještava sastavljača o pogrešci. Ako su podatci ipak ispravni, server čeka administratora kako bi on odoborio taj događaj.
 				
 				\begin{figure}[H]
-					\includegraphics[width=\textwidth]{dijagrami/SekvencijskiKreiranjeDogadaja.PNG} 
+					\includegraphics[width=\textwidth]{dijagrami/SeqDiagram2.PNG} 
 					\caption{Sekvencijski dijagram, kreiranje događaja}
 					\label{fig:SeqDiagram2}
 				\end{figure}
