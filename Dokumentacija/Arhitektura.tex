@@ -49,6 +49,13 @@ Backend se sastoji od:
 			\textbf{\textit{dio 1. revizije}}\\
 			
 		\textit{Potrebno je opisati koju vrstu i implementaciju baze podataka ste odabrali, glavne komponente od kojih se sastoji i slično.}
+
+		Baza podataka za aplikaciju implementirana je u obliku relacijske baze podataka, koja podatke sprema u obliku redaka ili n-torki i stupaca ili atributa koji zajedno tvore tablicu.  \\
+Glavna komponenta baze je tablica Korisnik, koja se puni osobnim podacima unesenim pri registraciji u sustav.  Svakom novom korisniku dodjeljuje se primarni ključ, unikatan identifikacijski broj pomoću kojeg se korisnici u bazi podataka međusobno razlikuju. Budući da korisnik ima jednu ili više dodijeljenih uloga, koje su definirane u tablici Uloga, izrađena je veza između dvije tablice koja sadrži identifikacijske brojeve korisnika i odgovarajuće uloge. \\
+Kako bi korisnik zaigrao na kvizu, potrebno je prvo pronaći ekipu kojoj odgovara svojim područjima znanja, zbog čega je izrađena tablica Ekipa koja sadrži minimalno jednoga, a maksimalno petero članova.  \\
+Ako korisnik ima ulogu sastavljača, on kreira kviz s podacima i informacijama koji se spremaju u tablicu Kviz.  Svaki kviz ima svoj identifikacijski broj i unikatne atribute, vrijeme održavanja i ID sastavljača, jer jedan sastavljač ne može objaviti dva različita kviza koja se održavaju u isto vrijeme.  \\
+Tablica Obavijest sadrži svoj identifikacijski broj, tekst obavijesti koji se prikazuje korisniku i ID korisnika kao strani ključ. \\
+
 		
 			\subsection{Opis tablica}
 			
@@ -75,6 +82,7 @@ Backend se sastoji od:
 					podrucja\_znanja & VARCHAR(150) & Područja znanja igrača, koriste se pri odabiru ekipe. \\ \hline
 					nadimak(U) & VARCHAR(50) & Nadimak koji si korisnik osmisli pri registraciji. \\ \hline
 					prosj\_broj\_ekipa & INT & Prosječan broj ekipa koji sudjeluju u kvizovima nekog sastavljača, opcionalno. \\ \hline
+					blokiran & BOOLEAN & Atribut koji daje informaciju o tome je li korisnik blokiran ili ne. \\ \hline
 					\SetCell{LightBlue}ekipa\_id & BIG INT & Identifikacijski broj ekipe kojoj korisnik pripada, opcionalno. \\ \hline
 				\end{longtblr}
 
@@ -140,6 +148,7 @@ Backend se sastoji od:
 			nagrade & VARCHAR(100) & Popis nagrada na visoko plasirane ekipe. \\ \hline
 			vrsta & VARCHAR(50) & Vrsta kviza (povijest, sport, ..). \\ \hline
 			naziv\_kviza (U) & VARCHAR(50) & Unikatan naziv kviza. \\ \hline
+			aktivan & BOOLEAN & Predstavlja je li kviz trenutno aktivan ili ne. \\ \hline
 			\SetCell{LightBlue} korisnik\_id & BIG INT & Identifikacijski broj sastavljača, strani ključ s referencom na korisnika. \\ \hline
 			\end{longtblr}
 
