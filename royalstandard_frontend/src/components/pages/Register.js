@@ -1,12 +1,17 @@
 import React from "react";
-import {Button, Checkbox, Form, Input, Upload, Typography} from "antd";
+import {Button, Select, Form, Input, Upload, Typography} from "antd";
 import {PlusOutlined} from "@ant-design/icons";
+import {HTTPRequest, ContentType} from "../../requests/HTTPRequest"
 const {Title} = Typography;
+const { Option } = Select;
 
 const Register = () => {
 
   const onFinish = (values) => {
     console.log('Success:', values);
+
+    const req = new HTTPRequest();
+    req.post('/register', ContentType.JSON).then(() => {});
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -50,9 +55,21 @@ const Register = () => {
           </Form.Item>
 
           <Form.Item label="Phone number" name="phone"
-                     rules={[{required: true, message: 'Please input your phone number!'}]}
+                     rules={[{required: false, message: 'Please input your phone number!'}]}
           >
             <Input />
+          </Form.Item>
+
+          <Form.Item name="role" label="Role"
+                     rules={[{ required: true }]}
+          >
+            <Select
+              placeholder="Select an option"
+              allowClear
+            >
+              <Option value="player">player</Option>
+              <Option value="creator">creator</Option>
+            </Select>
           </Form.Item>
 
           <Form.Item label="Password" name="password"
@@ -61,7 +78,7 @@ const Register = () => {
             <Input.Password />
           </Form.Item>
 
-          <Form.Item label="Picture" valuePropName="fileList">
+          <Form.Item label="Picture" valuePropName="fileList" rules={[{required: false}]}>
             <Upload action="/upload.do" listType="picture-card">
               <div>
                 <PlusOutlined />
@@ -70,11 +87,7 @@ const Register = () => {
             </Upload>
           </Form.Item>
 
-          <Form.Item name="remember" valuePropName="checked" wrapperCol={{offset: 7, span: 16}}>
-            <Checkbox>Remember me</Checkbox>
-          </Form.Item>
-
-          <Form.Item wrapperCol={{offset: 5, span: 16}}>
+          <Form.Item wrapperCol={{offset: 6, span: 15}}>
             <Button type="primary" htmlType="submit">Submit</Button>
             <Button type="primary" htmlType="reset" style={{marginLeft: "20px"}}>Reset</Button>
           </Form.Item>

@@ -1,11 +1,15 @@
 import React from "react";
-import {Form, Input, Typography} from "antd";
+import {Button, Form, Input, Typography} from "antd";
+import {ContentType, HTTPRequest} from "../../requests/HTTPRequest";
 const {Title} = Typography;
 
 const Login = () => {
 
   const onFinish = (values) => {
     console.log('Success:', values);
+
+    const req = new HTTPRequest();
+    req.post('/login', ContentType.JSON).then(() => {});
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -34,6 +38,10 @@ const Login = () => {
                      rules={[{required: true, message: 'Please input your name!'}]}
           >
             <Input.Password />
+          </Form.Item>
+
+          <Form.Item wrapperCol={{offset: 9, span: 10}}>
+            <Button type="primary" htmlType="submit">Submit</Button>
           </Form.Item>
         </Form>
       </div>
