@@ -9,7 +9,8 @@ const Login = () => {
     console.log('Success:', values);
 
     const req = new HTTPRequest();
-    req.post('/login', ContentType.JSON).then(() => {});
+    req.post('/login', ContentType.JSON, JSON.stringify(values))
+      .then(res => console.log(res));
   };
 
   const onFinishFailed = (errorInfo) => {

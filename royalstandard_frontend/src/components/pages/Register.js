@@ -11,7 +11,8 @@ const Register = () => {
     console.log('Success:', values);
 
     const req = new HTTPRequest();
-    req.post('/register', ContentType.JSON).then(() => {});
+    req.post('/register', ContentType.JSON, JSON.stringify(values))
+      .then(res => console.log(res));
   };
 
   const onFinishFailed = (errorInfo) => {

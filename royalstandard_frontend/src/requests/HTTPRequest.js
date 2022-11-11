@@ -1,3 +1,5 @@
+const URI_START = 'http://localhost:8080';
+
 // simulate an enumeration by freezing an object
 const ContentType = {
   JSON: 'application/json',
@@ -9,11 +11,11 @@ Object.freeze(ContentType);
 class HTTPRequest {
 
   async get(path) {
-    await fetch(path);
+    await fetch(URI_START + path);
   }
 
   async post(path, contentType, body) {
-    await fetch(path, {
+    await fetch(URI_START + path, {
       method: 'POST',
       headers: {
         'Content-Type': contentType
@@ -23,7 +25,7 @@ class HTTPRequest {
   }
 
   async put(path, contentType, body) {
-    await fetch(path, {
+    await fetch(URI_START + path, {
       method: 'PUT',
       headers: {
         'Content-Type': contentType
@@ -33,8 +35,8 @@ class HTTPRequest {
   }
 
   async patch(path, contentType, body) {
-    await fetch(path, {
-      method: 'patch',
+    await fetch(URI_START + path, {
+      method: 'PATCH',
       headers: {
         'Content-Type': contentType
       },
@@ -43,7 +45,7 @@ class HTTPRequest {
   }
 
   async delete(path) {
-    await fetch(path, {
+    await fetch(URI_START + path, {
       method: 'DELETE'
     });
   }
