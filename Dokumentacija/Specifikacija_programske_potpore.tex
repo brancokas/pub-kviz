@@ -872,13 +872,15 @@
 				
 				\textbf{Obrazac uporabe UC02 - Registracija}\\
 				
-				Neregistrirani korisnik šalje zahtjev za registracijskom stranicom. Web aplikacija korisniku dohvaća stranicu i prikazuje na ekranu sva registracijska polja. Nakon što neregistrirani korisnik popuni sva polja i preda ih, server dohvaća sve nadimke i e-mailove od baze podataka, kako bi provjerio validnost predanih podataka. Ukoliko neko od polja nije ispunjeno, lozinka ne zadovoljava uvjete i korisničko ime je već zauzeto, podatci nisu validni i onda server obavještava neregistriranog korisnika o grešci. Ako su podatci validni, server pohranjuje novog korisnika u bazu podataka. Nakon toga web aplikacija dohvaća početnu stranicu i prikazuje ju korisniku.
+				Neregistrirani korisnik šalje zahtjev za registracijskom stranicom. Web aplikacija korisniku dohvaća stranicu i prikazuje na ekranu sva registracijska polja. Nakon što neregistrirani korisnik popuni sva polja i preda ih, server provjerava ima li korisnika s istim e-mailom i nadimkom u bazi podataka, kako bi provjerio validnost predanih podataka. Ukoliko neko od polja nije ispunjeno, lozinka ne zadovoljava uvjete i korisničko ime je već zauzeto, mail nije jedinstven, podatci nisu validni i onda server obavještava neregistriranog korisnika o grešci. Ako su podatci validni, server pohranjuje novog korisnika u bazu podataka. Nakon toga web aplikacija dohvaća početnu stranicu i prikazuje ju korisniku.
 				
 				\begin{figure}[H]
 					\includegraphics[width=\textwidth]{dijagrami/SeqDiagram1.PNG} 
 					\caption{Sekvencijski dijagram, registracija korisnika}
 					\label{fig:SeqDiagram1}
 				\end{figure}
+				
+				\eject
 
 				\textbf{Obrazac uporabe UC06 - Kreiranje nadolazećih događaja}\\
 				
