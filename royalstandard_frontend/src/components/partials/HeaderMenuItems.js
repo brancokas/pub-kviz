@@ -10,47 +10,39 @@ const HeaderMenuItems = (props) => {
   const navigate = useNavigate();
   const user = sessionStorage.getItem('user');
 
-  const setDisplayForLoggedIn = () => {
+  const setDisplayForLoggedOut = () => {
     return user === null ? "block" : "none";
   }
 
-  const setDisplayForLoggedOut = () => {
+  const setDisplayForLoggedIn = () => {
     return user !== null ? "block" : "none";
-  }
-
-  /**
-   * icons are shown in a side header and hidden in the main header
-   * @returns {string} display CSS property value
-   */
-  const setIconDisplay = () => {
-    return props.headerType === 'main' ? "none" : "inline";
   }
 
   return(
     <Menu theme="dark" mode={props.headerType === 'main' ? "horizontal" : "inline"}>
 
       <MenuItem onClick={() => navigate("/")}>
-        <HomeOutlined style={{display: setIconDisplay()}} />
+        {props.headerType === 'side' && <HomeOutlined />}
         <span>Home</span>
       </MenuItem>
 
-      <MenuItem onClick={() => navigate("/register")} style={{display: setDisplayForLoggedIn()}}>
-        <DesktopOutlined style={{display: setIconDisplay()}} />
+      <MenuItem onClick={() => navigate("/register")} style={{display: setDisplayForLoggedOut()}}>
+        {props.headerType === 'side' && <DesktopOutlined />}
         <span>Register</span>
       </MenuItem>
 
-      <MenuItem onClick={() => navigate("/login")} style={{display: setDisplayForLoggedIn()}}>
-        <UserOutlined style={{display: setIconDisplay()}} />
+      <MenuItem onClick={() => navigate("/login")} style={{display: setDisplayForLoggedOut()}}>
+        {props.headerType === 'side' && <UserOutlined />}
         <span>Login</span>
       </MenuItem>
 
-      <MenuItem onClick={() => navigate("/notifications")}>
-        <NotificationOutlined style={{display: setIconDisplay()}} />
+      <MenuItem onClick={() => navigate("/notifications")} style={{display: setDisplayForLoggedIn()}}>
+        {props.headerType === 'side' && <NotificationOutlined/>}
         <span>Notifications</span>
       </MenuItem>
 
-      <MenuItem onClick={() => navigate("/logout")} style={{display: setDisplayForLoggedOut()}}>
-        <LogoutOutlined style={{display: setIconDisplay()}} />
+      <MenuItem onClick={() => navigate("/logout")} style={{display: setDisplayForLoggedIn()}}>
+        {props.headerType === 'side' && <LogoutOutlined/>}
         <span>Logout</span>
       </MenuItem>
 
