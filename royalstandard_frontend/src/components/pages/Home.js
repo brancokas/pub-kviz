@@ -9,7 +9,7 @@ const Home = () => {
         Home
       </Title>
       <br />
-      <div>
+      <div className="centerX" style={{ maxWidth: "700px", textAlign: "center" }}>
         Aplikacija nudi mogućnost lakšeg oglašavanja kvizova kvizaškoj
         zajednici, ali isto tako i lakše pronalaženje istih. Igrači koji bi se
         htjeli okušati u igranju kvizova, ali nemaju ekipu, također će pronaći

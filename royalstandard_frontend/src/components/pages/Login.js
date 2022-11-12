@@ -6,7 +6,8 @@ const {Title} = Typography;
 
 const Login = () => {
   const [loggedIn, setLoggedIn] = useState(false);
-  let navigate = useNavigate();
+  const [error, setError] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (loggedIn) {
@@ -25,9 +26,17 @@ const Login = () => {
         }
         return res.json();
       })
+      .catch(err => {
+        console.log(err);
+        setError(() => err.message);
+      })
       .then(data => {
-        console.log(data)
-        setLoggedIn(() => true);
+        if (data !== undefined) {
+          console.log(data)
+          // save user to the session storage
+          sessionStorage.setItem('user', JSON.stringify(data));
+          setLoggedIn(() => true);
+        }
       });
   };
 
@@ -63,6 +72,10 @@ const Login = () => {
             <Button type="primary" htmlType="submit">Submit</Button>
           </Form.Item>
         </Form>
+
+        <div style={{visibility: error === false ? "hidden" : "visible"}}>
+          {error}
+        </div>
       </div>
     </div>
   )

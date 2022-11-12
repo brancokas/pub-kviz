@@ -8,8 +8,8 @@ const { Option } = Select;
 
 const Register = () => {
   const [registered, setRegistered] = useState(false);
-  let navigate = useNavigate();
-  let responseOK
+  const [error, setError] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (registered) {
@@ -30,10 +30,13 @@ const Register = () => {
       })
       .catch(err => {
         console.log(err);
+        setError(() => err.message);
       })
       .then(data => {
         if (data !== undefined) {
           console.log(data)
+          // save user to the session storage
+          sessionStorage.setItem('user', JSON.stringify(data));
           setRegistered(() => true);
         }
       });
@@ -117,6 +120,10 @@ const Register = () => {
             <Button type="primary" htmlType="reset" style={{marginLeft: "20px"}}>Reset</Button>
           </Form.Item>
         </Form>
+
+        <div style={{visibility: error === false ? "hidden" : "visible"}}>
+          {error}
+        </div>
       </div>
     </div>
   )

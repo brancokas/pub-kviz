@@ -1,7 +1,6 @@
-import {Menu} from "antd";
 import React from "react";
 import {Header} from "antd/es/layout/layout";
-import MenuItem from "antd/es/menu/MenuItem";
+import HeaderMenuItems from "./partials/HeaderMenuItems";
 
 const MainHeader = () => {
 
@@ -15,15 +14,7 @@ const MainHeader = () => {
       }}
     >
       <div className="logo" />
-
-      <Menu theme="dark" mode="horizontal">
-        {/*<Link> tags are not supported in this context*/}
-        <MenuItem><a href="/">Home</a></MenuItem>
-        <MenuItem><a href="/register">Register</a></MenuItem>
-        <MenuItem><a href="/login">Login</a></MenuItem>
-        <MenuItem><a href="/notifications">Notifications</a></MenuItem>
-        <MenuItem><a href="/logout">Logout</a></MenuItem>
-      </Menu>
+      <HeaderMenuItems headerType="main" />
     </Header>
   );
 }

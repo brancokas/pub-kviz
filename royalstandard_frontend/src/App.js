@@ -1,6 +1,6 @@
 import 'antd/dist/antd.min.css';
 import './App.css';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 import MainHeader from './components/MainHeader';
@@ -17,11 +17,12 @@ const App = () => {
 
   return(
     <>
-      <MainHeader />
-      <SideHeader />
-      <Logo />
 
       <BrowserRouter>
+        <MainHeader />
+        <SideHeader />
+        <Logo />
+
         <Routes>
           <Route path="/register" element={<Register />}/>
           <Route path="/login" element={<Login />}/>
