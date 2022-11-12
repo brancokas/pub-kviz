@@ -2,7 +2,7 @@ import {Layout, Menu } from "antd";
 import React, {useState} from "react";
 import {DesktopOutlined, MenuOutlined, PieChartOutlined} from '@ant-design/icons';
 
-const {Sider } = Layout;
+const {Sider} = Layout;
 
 function getItem(label, key, icon, children) {
   return {key, icon, children, label};
@@ -14,6 +14,7 @@ const items = [
   getItem('Register', 'side-header-link-register', <DesktopOutlined />),
   getItem('Login', 'side-header-link-login', <DesktopOutlined />),
   getItem('Notifications', 'side-header-link-notifications', <DesktopOutlined />),
+  getItem('Logout', 'side-header-link-logout', <DesktopOutlined />),
 
   // EXAMPLE OF THE NESTED OPTIONS FROM THE DOCUMENTATION
 

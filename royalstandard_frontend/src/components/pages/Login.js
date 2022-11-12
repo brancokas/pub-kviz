@@ -1,16 +1,34 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {Button, Form, Input, Typography} from "antd";
 import {ContentType, HTTPRequest} from "../../requests/HTTPRequest";
+import {useNavigate} from "react-router-dom";
 const {Title} = Typography;
 
 const Login = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    if (loggedIn) {
+      navigate('/home');
+    }
+  }, [loggedIn, navigate]);
 
   const onFinish = (values) => {
     console.log('Success:', values);
 
     const req = new HTTPRequest();
     req.post('/login', ContentType.JSON, JSON.stringify(values))
-      .then(res => console.log(res));
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("HTTP status: " + res.status);
+        }
+        return res.json();
+      })
+      .then(data => {
+        console.log(data)
+        setLoggedIn(() => true);
+      });
   };
 
   const onFinishFailed = (errorInfo) => {

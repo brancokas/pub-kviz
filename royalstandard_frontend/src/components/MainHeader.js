@@ -22,6 +22,7 @@ const MainHeader = () => {
         <MenuItem><a href="/register">Register</a></MenuItem>
         <MenuItem><a href="/login">Login</a></MenuItem>
         <MenuItem><a href="/notifications">Notifications</a></MenuItem>
+        <MenuItem><a href="/logout">Logout</a></MenuItem>
       </Menu>
     </Header>
   );

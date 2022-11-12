@@ -11,6 +11,7 @@ import Register from "./components/pages/Register";
 import Login from "./components/pages/Login";
 import Home from "./components/pages/Home";
 import Notifications from "./components/pages/Notifications";
+import Logout from "./components/pages/Logout";
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/register" element={<Register />}/>
           <Route path="/login" element={<Login />}/>
           <Route path="/notifications" element={<Notifications />}/>
+          <Route path="/logout" element={<Logout />}/>
 
           {/*matches any route*/}
           <Route path="/*" element={<Home />}/>

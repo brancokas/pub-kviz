@@ -1,18 +1,36 @@
-import React from "react";
 import {Button, Select, Form, Input, Upload, Typography} from "antd";
 import {PlusOutlined} from "@ant-design/icons";
 import {HTTPRequest, ContentType} from "../../requests/HTTPRequest"
+import {useNavigate} from "react-router-dom";
+import {useEffect, useState} from "react";
 const {Title} = Typography;
 const { Option } = Select;
 
 const Register = () => {
+  const [registered, setRegistered] = useState(false);
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    if (registered) {
+      navigate('/home');
+    }
+  }, [registered, navigate]);
 
   const onFinish = (values) => {
     console.log('Success:', values);
 
     const req = new HTTPRequest();
     req.post('/register', ContentType.JSON, JSON.stringify(values))
-      .then(res => console.log(res));
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("HTTP status: " + res.status);
+        }
+        return res.json()
+      })
+      .then(data => {
+        console.log(data)
+        setRegistered(() => true);
+      });
   };
 
   const onFinishFailed = (errorInfo) => {
