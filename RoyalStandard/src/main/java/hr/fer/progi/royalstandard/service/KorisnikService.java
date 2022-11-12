@@ -5,7 +5,10 @@ import hr.fer.progi.royalstandard.domain.Korisnik;
 import java.util.List;
 
 public interface KorisnikService {
-    List<Korisnik> listAll();
+
+    Korisnik getCurrentUser();
+
+    Korisnik logoutUser();
 
     Korisnik createKorisnik(Korisnik korisnik);
 

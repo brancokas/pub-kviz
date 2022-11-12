@@ -18,10 +18,16 @@ public class KorisnikServiceImpl implements KorisnikService {
     private KorisnikRepository repository;
 
     private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    private Korisnik currentUser;
 
     @Override
-    public List<Korisnik> listAll() {
-        return repository.findAll();
+    public Korisnik getCurrentUser() {
+        return currentUser;
+    }
+
+    @Override
+    public Korisnik logoutUser() {
+        return currentUser = null;
     }
 
     @Override
@@ -39,7 +45,8 @@ public class KorisnikServiceImpl implements KorisnikService {
 
         String encodedPassword = passwordEncoder.encode(korisnik.getPassword());
         korisnik.setPassword(encodedPassword);
-        return repository.save(korisnik);
+        currentUser = repository.save(korisnik);
+        return currentUser;
     }
 
     @Override

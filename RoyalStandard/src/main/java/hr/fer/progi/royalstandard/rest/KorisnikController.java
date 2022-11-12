@@ -6,8 +6,6 @@ import hr.fer.progi.royalstandard.service.KorisnikovaUlogaService;
 import hr.fer.progi.royalstandard.service.RequestDeniedException;
 import hr.fer.progi.royalstandard.service.UlogaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,8 +23,8 @@ public class KorisnikController {
     private UlogaService ulogaService;
 
     @GetMapping("/register")
-    public List<Korisnik> listKorisnici() {
-        return korisnikService.listAll();
+    public Korisnik listKorisnici() {
+        return korisnikService.getCurrentUser();
     }
 
     @PostMapping(value = "/register")
@@ -46,10 +44,15 @@ public class KorisnikController {
         Korisnik korisnik = korisnikService.getKorisnik(userLogin.getUsername());
         System.out.println(userLogin + " \n " + korisnik);
         if (korisnik == null ||
-                korisnikService.validate(userLogin.getPassword(), korisnik.getPassword()) == false)
+                !korisnikService.validate(userLogin.getPassword(), korisnik.getPassword()))
             throw new RequestDeniedException("Korisnik s danim usernamom i lozinkom ne postoji");
 
         return korisnik;
+    }
+
+    @GetMapping("/logout")
+    public Korisnik logoutUser() {
+        return korisnikService.logoutUser();
     }
 
 }
