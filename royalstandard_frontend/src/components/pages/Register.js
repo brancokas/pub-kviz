@@ -9,6 +9,7 @@ const { Option } = Select;
 const Register = () => {
   const [registered, setRegistered] = useState(false);
   let navigate = useNavigate();
+  let responseOK
 
   useEffect(() => {
     if (registered) {
@@ -25,11 +26,16 @@ const Register = () => {
         if (!res.ok) {
           throw new Error("HTTP status: " + res.status);
         }
-        return res.json()
+        return res.json();
+      })
+      .catch(err => {
+        console.log(err);
       })
       .then(data => {
-        console.log(data)
-        setRegistered(() => true);
+        if (data !== undefined) {
+          console.log(data)
+          setRegistered(() => true);
+        }
       });
   };
 
