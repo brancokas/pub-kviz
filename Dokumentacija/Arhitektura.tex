@@ -1,5 +1,5 @@
 \chapter{Arhitektura i dizajn sustava}
-
+\textbf{\textit{dio 1. revizije}}\\
     \begin{figure}[!h]
 		\centering
 		\includegraphics[width=13cm]{slike/arhitektura.PNG} 
@@ -27,22 +27,6 @@ Backend se sastoji od:
 \textbf{Repository} omogućuje komunikaciju s bazom podataka pomoću SQL-a. Objekti iz relacijske baze podataka pretvaraju se objekte programskog jezika Java korištenjem tehnike ORM.\\\\
 		
 
-
-		
-		\textbf{\textit{dio 1. revizije}}\\
-
-		\textit{ Potrebno je opisati stil arhitekture te identificirati: podsustave, preslikavanje na radnu platformu, spremišta podataka, mrežne protokole, globalni upravljački tok i sklopovsko-programske zahtjeve. Po točkama razraditi i popratiti odgovarajućim skicama:}
-	\begin{itemize}
-		\item 	\textit{izbor arhitekture temeljem principa oblikovanja pokazanih na predavanjima (objasniti zašto ste baš odabrali takvu arhitekturu)}
-		\item 	\textit{organizaciju sustava s najviše razine apstrakcije (npr. klijent-poslužitelj, baza podataka, datotečni sustav, grafičko sučelje)}
-		\item 	\textit{organizaciju aplikacije (npr. slojevi frontend i backend, MVC arhitektura) }		
-	\end{itemize}
-
-	
-		
-
-		
-
 				
 		\section{Baza podataka}
 			
@@ -58,9 +42,6 @@ Tablica Obavijest sadrži svoj identifikacijski broj, tekst obavijesti koji se p
 
 		
 			\subsection{Opis tablica}
-			
-
-				\textit{Svaku tablicu je potrebno opisati po zadanom predlošku. Lijevo se nalazi točno ime varijable u bazi podataka, u sredini se nalazi tip podataka, a desno se nalazi opis varijable. Svjetlozelenom bojom označite primarni ključ. Svjetlo plavom označite strani ključ}
 				
 			
 				\begin{longtblr} [
@@ -75,7 +56,7 @@ Tablica Obavijest sadrži svoj identifikacijski broj, tekst obavijesti koji se p
 					\SetCell{LightGreen}korisnik\_id & BIG INT & Identifikacijski broj korisnika, primarni ključ.\\ \hline
 					ime & VARCHAR(100) & Ime korisnika. \\ \hline
 					prezime & VARCHAR(100) & Prezime korisnika. \\ \hline
-					email\_adresa & VARCHAR(100) & E-mail adresa korisnika. \\ \hline
+					email\_adresa(U) & VARCHAR(100) & E-mail adresa korisnika. \\ \hline
 					lozinka & VARCHAR(50) & Lozinka koju korisnik osmisli pri registraciji. \\ \hline
 					slika & VARBINARY & Profilna slika korisnika u aplikaciji, opcionalno. \\ \hline
 					broj\_telefona & VARCHAR(50) & Broj telefona korisnika, opcionalno. \\ \hline
@@ -126,7 +107,7 @@ Tablica Obavijest sadrži svoj identifikacijski broj, tekst obavijesti koji se p
 					\hline \textbf{Ekipa} & \\ \hline[3pt]
 					\SetCell{LightGreen} ekipa\_id & BIG INT & Identifikacijski broj ekipe, primarni ključ. \\ \hline
 					broj\_clanova & INT & Broj članova ekipe, ne smije biti manji od 1 ni veći od 5. \\ \hline
-					naziv\_ekipe & VARCHAR(50) & Ime ekipe. \\ \hline
+					naziv\_ekipe(U) & VARCHAR(50) & Ime ekipe. \\ \hline
 				\end{longtblr}
 			
 			\begin{longtblr} [
@@ -186,7 +167,6 @@ Tablica Obavijest sadrži svoj identifikacijski broj, tekst obavijesti koji se p
 				
 			
 			\subsection{Dijagram baze podataka}
-				\textit{ U ovom potpoglavlju potrebno je umetnuti dijagram baze podataka. Primarni i strani ključevi moraju biti označeni, a tablice povezane. Bazu podataka je potrebno normalizirati. Podsjetite se kolegija "Baze podataka".}
 			 \begin{figure}[!h]
 			\centering
 			\includegraphics[width=15cm]{slike/final.png} 

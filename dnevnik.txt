@@ -22,3 +22,11 @@ Dnevnik sastajanja:
 	– opis teme
 	– definiranje funkcionalnih zahtjeva
 	– podjela zadataka (obrasci uporabe, opis arhitekture, model baze podataka)
+
+4. sastanak
+• Datum: 7. studenog 2022.
+• Prisustvovali: svi
+• Teme sastanka:
+	– sastanak s asistenticom i demonstratorom
+	– provjera obrazaca uporabe
+	– upute o programiranju

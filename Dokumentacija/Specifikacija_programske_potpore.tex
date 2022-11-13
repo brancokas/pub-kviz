@@ -4,11 +4,6 @@
 			
 			\textbf{\textit{dio 1. revizije}}\\
 			
-			\textit{Navesti \textbf{dionike} koji imaju \textbf{interes u ovom sustavu} ili  \textbf{su nositelji odgovornosti}. To su prije svega korisnici, ali i administratori sustava, naručitelji, razvojni tim.}\\
-				
-			\textit{Navesti \textbf{aktore} koji izravno \textbf{koriste} ili \textbf{komuniciraju sa sustavom}. Oni mogu imati inicijatorsku ulogu, tj. započinju određene procese u sustavu ili samo sudioničku ulogu, tj. obavljaju određeni posao. Za svakog aktora navesti funkcionalne zahtjeve koji se na njega odnose.}\\
-			
-			
 			\noindent \textbf{Dionici:}
 			
 			\begin{packed_enum}
@@ -101,9 +96,7 @@
 				\textbf{\textit{dio 1. revizije}}
 				
 				\subsubsection{Opis obrazaca uporabe}
-					\textit{Funkcionalne zahtjeve razraditi u obliku obrazaca uporabe. Svaki obrazac je potrebno razraditi prema donjem predlošku. Ukoliko u nekom koraku može doći do odstupanja, potrebno je to odstupanje opisati i po mogućnosti ponuditi rješenje kojim bi se tijek obrasca vratio na osnovni tijek.}\\
 					
-
 				\noindent \underbar{\textbf{UC$$01$$ - $$Pregled naslovnice$$}}
 				\begin{packed_item}
 					
@@ -866,10 +859,6 @@
 				
 				\textbf{\textit{dio 1. revizije}}\\
 				
-				\textit{Nacrtati sekvencijske dijagrame koji modeliraju najvažnije dijelove sustava (max. 4 dijagrama). Ukoliko postoji nedoumica oko odabira, razjasniti s asistentom. Uz svaki dijagram napisati detaljni opis dijagrama.}\\
-				
-				
-				
 				\textbf{Obrazac uporabe UC02 - Registracija}\\
 				
 				Neregistrirani korisnik šalje zahtjev za registracijskom stranicom. Web aplikacija korisniku dohvaća stranicu i prikazuje na ekranu sva registracijska polja. Nakon što neregistrirani korisnik popuni sva polja i preda ih, server provjerava ima li korisnika s istim e-mailom i nadimkom u bazi podataka, kako bi provjerio validnost predanih podataka. Ukoliko neko od polja nije ispunjeno, lozinka ne zadovoljava uvjete i korisničko ime je već zauzeto, mail nije jedinstven, podatci nisu validni i onda server obavještava neregistriranog korisnika o grešci. Ako su podatci validni, server pohranjuje novog korisnika u bazu podataka. Nakon toga web aplikacija dohvaća početnu stranicu i prikazuje ju korisniku.
@@ -884,7 +873,7 @@
 
 				\textbf{Obrazac uporabe UC06 - Kreiranje nadolazećih događaja}\\
 				
-				Registrirani korisnik(sastavljač kviza) šalje zahtjeva za stranicom za kreiranje novih događaja. Web aplikacija dohvaća stranicu i prikazuje tu stranicu na ekranu sa svim poljima koja trebaju biti popunjena. Nakon popunjavanja polja, korisnik predaje sve podatke. Nakon toga, server dohvaća sve podatke kako bi provjerio njihovu ispravnost. Ukoliko je sastavljač kviza stvorio novi događaj i održavanje novog događaja se poklapa s nekim drugim događajem koji je stvorio isti sastavljač, server obavještava sastavljača o pogrešci. Ako su podatci ipak ispravni, server čeka administratora kako bi on odoborio taj događaj.
+				Registrirani korisnik(sastavljač kviza) šalje zahtjeva za stranicom za kreiranje novih događaja. Web aplikacija dohvaća stranicu i prikazuje tu stranicu na ekranu sa svim poljima koja trebaju biti popunjena. Nakon popunjavanja polja, korisnik predaje sve podatke. Nakon toga, server dohvaća sve podatke kako bi provjerio njihovu ispravnost. Ukoliko je sastavljač kviza stvorio novi događaj i održavanje novog događaja se poklapa s nekim drugim događajem koji je stvorio isti sastavljač, server obavještava sastavljača o pogrešci. Ako su podatci ipak ispravni, server čeka administratora kako bi on odobrio taj događaj.
 				
 				\begin{figure}[H]
 					\includegraphics[width=\textwidth]{dijagrami/SeqDiagram2.PNG} 
@@ -896,7 +885,7 @@
 				
 				\textbf{Obrazac uporabe UC15 - Pronalazak ekipe za kviz}\\
 				
-				Registirani korisnik (igrač kviza) bira opciju za pronalazak ekipe. Aplikaciji su već dostupni podaci o igračevim najjačim područjima znanja. Aplikacija šalje upit bazi za ekipama koje još nisu pune. Baza nakon pretrage vraća što se od nje tražilo. Aplikacija zatim filtrira dobivene ekipe prema podacima koje ima o igračevim područjima znanja. U slučaju da takvih ekipa ima više, dodjeljuje mu jednu, a ako se dogodi da nema dostupnih ekipa, aplikacija o tome obavijesti igrača.
+				Registrirani korisnik (igrač kviza) bira opciju za pronalazak ekipe. Aplikaciji su već dostupni podaci o igračevim najjačim područjima znanja. Aplikacija šalje upit bazi za ekipama koje još nisu pune. Baza nakon pretrage vraća što se od nje tražilo. Aplikacija zatim filtrira dobivene ekipe prema podacima koje ima o igračevim područjima znanja. U slučaju da takvih ekipa ima više, dodjeljuje mu jednu, a ako se dogodi da nema dostupnih ekipa, aplikacija o tome obavijesti igrača.
 				
 				\begin{figure}[H]
 					\includegraphics[width=\textwidth]{dijagrami/SeqDiagram3.PNG} 
