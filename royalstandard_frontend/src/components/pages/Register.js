@@ -146,7 +146,7 @@ const Register = () => {
             </Form.Item>
           }
 
-          {hasTeam &&
+          {hasTeam && showForNonQuizMasterRole() &&
             <Form.Item label="Team name" name="teamName"
             rules={[{required: showForNonQuizMasterRole(), message: 'Please input your team name!'}]}
             required={hasTeam}>
