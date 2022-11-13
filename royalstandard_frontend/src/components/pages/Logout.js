@@ -13,7 +13,7 @@ const Logout = () => {
     }, [loggedOut, navigate]);
 
     const req = new HTTPRequest();
-    req.get('/logout').then(() => {
+    req.get('/users/logout').then(() => {
         sessionStorage.clear();
         setLoggedOut(() => true);
     });

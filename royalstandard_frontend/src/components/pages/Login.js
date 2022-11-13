@@ -19,7 +19,7 @@ const Login = () => {
     console.log('Success:', values);
 
     const req = new HTTPRequest();
-    req.post('/login', ContentType.JSON, JSON.stringify(values))
+    req.post('/users/login', ContentType.JSON, JSON.stringify(values))
       .then(res => {
         if (!res.ok) {
           throw new Error("HTTP status: " + res.status);
@@ -56,8 +56,8 @@ const Login = () => {
           onFinishFailed={onFinishFailed}
           autoComplete="off"
         >
-          <Form.Item label="Username" name="username"
-                     rules={[{required: true, message: 'Please input your username!'}]}
+          <Form.Item label="Nickname" name="nickname"
+                     rules={[{required: true, message: 'Please input your nickname!'}]}
           >
             <Input />
           </Form.Item>

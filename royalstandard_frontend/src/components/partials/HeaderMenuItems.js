@@ -4,7 +4,6 @@ import {useNavigate} from "react-router-dom";
 import {DesktopOutlined, HomeOutlined, LogoutOutlined, NotificationOutlined, UserOutlined} from "@ant-design/icons";
 import {Menu} from "antd";
 
-
 const HeaderMenuItems = (props) => {
 
   const navigate = useNavigate();
