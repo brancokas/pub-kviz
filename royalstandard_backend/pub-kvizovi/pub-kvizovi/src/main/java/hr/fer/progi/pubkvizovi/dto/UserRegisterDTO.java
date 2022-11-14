@@ -8,7 +8,7 @@ public class UserRegisterDTO {
     private String nickname;
     private String email;
     private String password;
-    private String knowledgeAreas;
+    private Integer[] knowledgeAreas;
     private boolean hasTeam;
     private String teamName;
     private String image;
@@ -62,11 +62,11 @@ public class UserRegisterDTO {
         this.password = password;
     }
 
-    public String getKnowledgeAreas() {
+    public Integer[] getKnowledgeAreas() {
         return knowledgeAreas;
     }
 
-    public void setKnowledgeAreas(String knowledgeAreas) {
+    public void setKnowledgeAreas(Integer[] knowledgeAreas) {
         this.knowledgeAreas = knowledgeAreas;
     }
 

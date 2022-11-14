@@ -11,6 +11,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -70,13 +71,16 @@ public class UserServiceImpl implements UserService {
         }
 
         Team team = null;
-        if ((userDTO.getRole().equals("PLAYER") || userDTO.getRole().equals("PLAYER,QUIZMASTER")) && userDTO.isHasTeam()) {
-            user.setKnowledgeArea(userDTO.getKnowledgeAreas());
-            Optional<Team> teamOptional = teamService.findByName(userDTO.getTeamName());
-            if (teamOptional.isEmpty())
-                team = teamService.createTeam(userDTO.getTeamName());
-            else
-                team = teamService.addMember(teamOptional.get());
+        if (userDTO.getRole().equals("PLAYER") || userDTO.getRole().equals("PLAYER,QUIZMASTER")) {
+            user.setKnowledgeArea(Arrays.toString(userDTO.getKnowledgeAreas()));
+
+            if (userDTO.isHasTeam()) {
+                Optional<Team> teamOptional = teamService.findByName(userDTO.getTeamName());
+                if (teamOptional.isEmpty())
+                    team = teamService.createTeam(userDTO.getTeamName());
+                else
+                    team = teamService.addMember(teamOptional.get());
+            }
         }
         user.setMyTeam(team);
 
@@ -108,12 +112,12 @@ public class UserServiceImpl implements UserService {
         }
 
         if (userDTO.getPhoneNumber() != null)
-            Assert.isTrue(userDTO.getPhoneNumber().matches("[0-9]+"), "Invalid phone number");
+            Assert.isTrue(userDTO.getPhoneNumber().matches("[0-9]+"), "Phone number is not valid");
 
-        validatePassword(userDTO.getPassword());
+        validatePasswordAndEmail(userDTO.getPassword(), userDTO.getEmail());
     }
 
-    private void validatePassword(String password) {
+    private void validatePasswordAndEmail(String password, String email) {
         if (password.length() < 8)
             throw new IllegalArgumentException("Password is too short (minimum is 8 characters)!");
 
@@ -133,5 +137,8 @@ public class UserServiceImpl implements UserService {
 
         if (!(hasDigit && hasLowerCase && hasUpperCase))
             throw new IllegalArgumentException("Password must contain at least 1 digit, 1 uppercase letter and 1 lowercase letter!");
+
+        String emailRegex = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+(?:\\.[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+)*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$";
+        Assert.isTrue(email.matches(emailRegex), "Email is not valid");
     }
 }
