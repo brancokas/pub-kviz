@@ -30,3 +30,11 @@ Dnevnik sastajanja:
 	– sastanak s asistenticom i demonstratorom
 	– provjera obrazaca uporabe
 	– upute o programiranju
+
+5. sastanak
+• Datum: 14. studenog 2022.
+• Prisustvovali: svi
+• Teme sastanka:
+	– sastanak s asistenticom i demonstratorom
+	– pokazivanje generičkih funkcionalnosti
+	– dodatne upute za dovršavanje 1. revizije
