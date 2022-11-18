@@ -1,0 +1,40 @@
+Dnevnik sastajanja:
+
+1. sastanak
+• Datum: 12. listopada 2022.
+• Prisustvovali: svi
+• Teme sastanka:
+	– upoznavanje
+	– dogovor oko prijedloga nove teme
+
+2. sastanak
+• Datum: 20. listopada 2022.
+• Prisustvovali: svi
+• Teme sastanka:
+	– sastanak s asistenticom i demonstratorom
+	– konaˇcan odabir alata i tehnologija
+	– upute o radu
+
+3. sastanak
+• Datum: 31. listopada 2022.
+• Prisustvovali: svi
+• Teme sastanka:
+	– opis teme
+	– definiranje funkcionalnih zahtjeva
+	– podjela zadataka (obrasci uporabe, opis arhitekture, model baze podataka)
+
+4. sastanak
+• Datum: 7. studenog 2022.
+• Prisustvovali: svi
+• Teme sastanka:
+	– sastanak s asistenticom i demonstratorom
+	– provjera obrazaca uporabe
+	– upute o programiranju
+
+5. sastanak
+• Datum: 14. studenog 2022.
+• Prisustvovali: svi
+• Teme sastanka:
+	– sastanak s asistenticom i demonstratorom
+	– pokazivanje generičkih funkcionalnosti
+	– dodatne upute za dovršavanje 1. revizije
