@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.11)  18 NOV 2022 17:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.11)  18 NOV 2022 20:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2195,11 +2195,11 @@ anged.
 (rerunfilecheck)             Checksum: F645B536E7A1AB2AF6F2EF93D5FE8D50;2450.
  ) 
 Here is how much of TeX's memory you used:
- 17778 strings out of 475071
- 315112 string characters out of 5782907
- 808391 words of memory out of 5000000
- 38617 multiletter control sequences out of 15000+600000
- 519037 words of font info for 126 fonts, out of 8000000 for 9000
+ 17834 strings out of 475071
+ 317208 string characters out of 5782907
+ 813754 words of memory out of 5000000
+ 38673 multiletter control sequences out of 15000+600000
+ 519279 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,116p,1639b,1070s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {e:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<e:/texlive/2022/texm
@@ -2208,7 +2208,7 @@ s/type1/public/kpfonts/jkpbn8a.pfb><e:/texlive/2022/texmf-dist/fonts/type1/publ
 ic/kpfonts/jkpmi.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkp
 mit8a.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmn8a.pfb><e
 :/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on PROGI_ProjektnaDokumentacija.pdf (43 pages, 1782041 bytes).
+Output written on PROGI_ProjektnaDokumentacija.pdf (43 pages, 1783089 bytes).
 PDF statistics:
  599 PDF objects out of 1000 (max. 8388607)
  514 compressed objects within 6 object streams
