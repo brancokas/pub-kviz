@@ -192,35 +192,39 @@ Tablica Obavijest sadrži svoj identifikacijski broj, tekst obavijesti koji se p
 			Na slici 4.4 prikazan je dijagram razreda koji prikazuje organizaciju backenda aplikacije podijeljenu u tri sloja. Prvi sloj čini UserController koji prima zahtjeve i korisniku šalje odgovor te ostvaruje komunikaciju sa slojem poslovne logike u kojem se nalaze sučelja UserService, RoleService i TeamService s popisom potrebnih metoda te njihove pripadajuće implementacije - razredi UserServiceImpl, RoleServiceImpl i TeamServiceImpl. Svaki od navedenih razreda ostvaruje vezu sa svojim repozitorijem, a svaki repozitoriji predstavljen je sučeljem koje onda dodatno nasljeđuje sučelje JpaRepository\textless T, ID\textgreater{} radnog okvira Spring Boot za čiju se implementaciju on sam i pobrine.
 			\newline\newline
 	
-			%\textbf{\textit{dio 2. revizije}}\\			
+			\textbf{\textit{dio 2. revizije}}\\			
 			
-			%\textit{Prilikom druge predaje projekta dijagram razreda i opisi moraju %odgovarati stvarnom stanju implementacije}
+			\textit{Prilikom druge predaje projekta dijagram razreda i opisi moraju odgovarati stvarnom stanju implementacije}
 			
 	
 			
-			%\eject
+			\eject
 		
-		%\section{Dijagram stanja}
+		\section{Dijagram stanja}
 			
 			
-			%\textbf{\textit{dio 2. revizije}}\\
+			\textbf{\textit{dio 2. revizije}}\\
 			
-			%\textit{Potrebno je priložiti dijagram stanja i opisati ga. Dovoljan je jedan dijagram stanja koji prikazuje \textbf{značajan dio funkcionalnosti} sustava. Na primjer, stanja korisničkog sučelja i tijek korištenja neke ključne funkcionalnosti jesu značajan dio sustava, a registracija i prijava nisu. }
+			\textit{Potrebno je priložiti dijagram stanja i opisati ga. Dovoljan je jedan dijagram stanja koji prikazuje \textbf{značajan dio funkcionalnosti} sustava. Na primjer, stanja korisničkog sučelja i tijek korištenja neke ključne funkcionalnosti jesu značajan dio sustava, a registracija i prijava nisu. }
 			
 			
-			%\eject 
+			\eject 
 		
-		%\section{Dijagram aktivnosti}
+		\section{Dijagram aktivnosti}
 			
-			%\textbf{\textit{dio 2. revizije}}\\
+			\textbf{\textit{dio 2. revizije}}\\
 			
-			 %\textit{Potrebno je priložiti dijagram aktivnosti s pripadajućim opisom. Dijagram aktivnosti treba prikazivati značajan dio sustava.}
+			 \textit{Potrebno je priložiti dijagram aktivnosti s pripadajućim opisom. Dijagram aktivnosti treba prikazivati značajan dio sustava.}
 			
-		%	\eject
-		%\section{Dijagram komponenti}
+			\eject
+		\section{Dijagram komponenti}
 		
-		%	\textbf{\textit{dio 2. revizije}}\\
-		
-			% \textit{Potrebno je priložiti dijagram komponenti s pripadajućim opisom. Dijagram komponenti treba prikazivati strukturu cijele aplikacije.}
+			Dijagram komponenti je strukturni statički UML dijagram koji služi za vizualizaciju organizacije i međuovisnosti između implementacijskih komponenata i čini dio specifikacije arhitekture programske potpore. Za pristup sustavu koriste se dva sučelja. Preko sučelja I$\_$HTML$\_$CSS$\_$JS dohvaćaju se HTML, CSS i JS datoteke koje pripadaju frontend dijelu aplikacije. Komponenta Router na upit preko URL-a odlučuje koja će se datoteka poslužiti na sučelje. Frontend se sastoji od JavaScript datoteka koje su raspoređene po komponentama nazvanim prema stranicama aplikacije. Sve te datoteke ovise o React biblioteci iz koje dohvaćaju već gotove komponente poput formi i slično. Preko REST$\_$API sučelja pristupa se komponenti Controller koja poslužuje podatke iz backend dijela aplikacije. Repository je zadužen za dohvaćanje podataka iz tablica baze podataka pomoću SQL upita, a koristeći pritom SQL$\_$API sučelje. React-view komponenta preko dostupnih sučelja komunicira s aplikacijom te ovisno o korisnikovim akcijama osvježava prikaz i dohvaća nove podatke ili datoteke.
+			
+			\begin{figure}[H]
+				\includegraphics[width=\textwidth]{dijagrami/ComponentDiagram.PNG} 
+				\caption{Dijagram komponenti}
+				\label{fig:ComponentDiagram}
+			\end{figure}
 		
 	

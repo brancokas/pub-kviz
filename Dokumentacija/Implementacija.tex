@@ -5,9 +5,9 @@
 			
 			 Komunikacija u timu realizirana je korištenjem aplikacija \underline{WhatsApp}\footnote{https://www.whatsapp.com/} i \underline{Discord}\footnote{https://discord.com/}. Za izradu UML dijagrama korišten je alat \underline{Astah Professional}\footnote{https://astah.net/editions/professional} , a kao sustav za upravljanje izvornim kodom \underline{Git}\footnote{https://git-scm.com/}. Udaljeni repozitorij projekta je dostupan na web platformi \underline{GitLab}\footnote{https://gitlab.com/}.
 			 
-			 Kao razvojno okruženje korišten je \underline{IntelliJ IDEA}\footnote{https://www.jetbrains.com/idea/} - integrirano razvojno okruženje (IDE) napisano u Javi za razvoj računalnog softvera napisanog u Javi, Kotlinu, Scali, Groovyu i drugim jezicima koji se temelje na JVM-u. Razvio ga je JetBrains (ranije poznat kao IntelliJ) i dostupan je kao Apache 2 licencirano izdanje zajednice (Community Edition) i u vlasničkom komercijalnom izdanju(Ultimate). Oba se mogu koristiti za komercijalni razvoj. Dostupno za operacijske sustave Windows, macOS i Linux.
+			 Kao razvojno okruženje korišten je \underline{IntelliJ IDEA}\footnote{https://www.jetbrains.com/idea/} - integrirano razvojno okruženje (IDE) napisano u Javi za razvoj računalnih softvera napisanih u Javi, Kotlinu, Scali, Groovyu i drugim jezicima koji se temelje na JVM-u. Razvio ga je JetBrains (ranije poznat kao IntelliJ) i dostupan je kao Apache 2 licencirano izdanje zajednice (Community Edition) te u vlasničkom komercijalnom izdanju (Ultimate). Oba se mogu koristiti za komercijalni razvoj, a dostupni su za operacijske sustave Windows, macOS i Linux.
 			 
-			 Aplikacija je napisana koristeći radni okvir \underline{Spring Boot}\footnote{https://start.spring.io/} i jezik \underline{Java}\footnote{https://www.oracle.com/java} za izradu backenda te \underline{React}\footnote{https://reactjs.org/} i jezik \underline{JavaScript}\footnote{https://www.javascript.com/} za izradu frontenda. React, također poznat kao React.js ili ReactJS, je biblioteka u JavaScriptu za izgradnju korisničkih sučelja. Održavana je od strane Facebooka. React se najčešće koristi kao osnova u razvoju web ili mobilnih aplikacija. Složene aplikacije u Reactu obično zahtijevaju korištenje dodatnih biblioteka za interakciju s API-jem. Spring Boot je radni okvir namijenjen stvaranju mikroservisa - arhitekture koja omogućuje neovisan razvoj više različitih servisa od kojih svaki ima svoj proces. Programerima nudi gotova rješenja i funkcionalnosti samostalnih produkcijskih Spring aplikacija koje „samo pokrenete“. Cilj je ubrzanje i pojednostavljenje razvoja aplikacija.
+			 Aplikacija je napisana koristeći radni okvir \underline{Spring Boot}\footnote{https://start.spring.io/} i jezik \underline{Java}\footnote{https://www.oracle.com/java} za izradu backenda te \underline{React}\footnote{https://reactjs.org/} i jezik \underline{JavaScript}\footnote{https://www.javascript.com/} za izradu frontenda. React, također poznat kao React.js ili ReactJS, je biblioteka u JavaScriptu za izgradnju korisničkih sučelja. Održava je Facebook. React se najčešće koristi kao osnova u razvoju web ili mobilnih aplikacija. Složene aplikacije u Reactu obično zahtijevaju korištenje dodatnih biblioteka za interakciju s API-jem. Spring je radni okvir korišten za olakšan razvoj aplikacija, a omogućava konfiguraciju objekata i lakše upravljanje objektima poslovne logike te općenito brine o kreiranju svih objekata, njihovom povezivanju i čitavom životnom ciklusu. Spring Boot je jedna od komponenti unutar Springa, koja dodatno olakšava njegovo korištenje i omogućava izradu čitavih samostalnih aplikacija. Cilj je ubrzanje i pojednostavljenje razvoja programske potpore.
 			 
 			 Baza podataka se nalazi na hosting aplikaciji u oblaku, \underline{Render}\footnote{https://render.com/}. Renderova PostgreSQL ponuda olakšava korištenje PostgreSQL-a na siguran, pouzdan i potpuno nesmetan način.\\
 			 			
@@ -42,9 +42,13 @@
 		
 		\section{Dijagram razmještaja}
 			
-			\textbf{\textit{dio 2. revizije}}
+			Dijagram razmještaja je strukturni statički UML dijagram koji opisuje topologiju sustava i općenito je usredotočen na odnos sklopovskih i programskih dijelova. U ovom slučaju klijent se pomoću web preglednika spaja na korisničko sučelje (frontend) preko kojeg komunicira s poslužiteljskom aplikacijom (backend), a za komunikaciju se koristi protokol HTTPS. Korisničko sučelje  implementirano je koristeći radni okviru React.js i pokrenuto je na platformi Render, dok je poslužiteljska aplikacija također pokrenuta na platformi Render, ali ostvarena je pomoću radnog okvira Spring Boot te pokrenuta unutar kontejnera Docker. Baza podataka, u koju backend aplikacija sprema sve podatke, izvodi se na svome poslužitelju, a nalazi se isto na platformi Render.
 			
-			 \textit{Potrebno je umetnuti \textbf{specifikacijski} dijagram razmještaja i opisati ga. Moguće je umjesto specifikacijskog dijagrama razmještaja umetnuti dijagram razmještaja instanci, pod uvjetom da taj dijagram bolje opisuje neki važniji dio sustava.}
+			\begin{figure}[H]
+				\includegraphics[width=\textwidth]{dijagrami/DeploymentDiagram.PNG} 
+				\caption{Dijagram razmještaja}
+				\label{fig:DeploymentDiagram}
+			\end{figure}
 			
 			\eject 
 		
