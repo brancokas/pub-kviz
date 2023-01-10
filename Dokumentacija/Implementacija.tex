@@ -117,12 +117,79 @@
 		
 		\section{Upute za puštanje u pogon}
 		
-			\textbf{\textit{dio 2. revizije}}\\
+			Za puštanje aplikacije u pogon bila su potrebna tri koraka, odnosno puštanje u pogon svake od tri važne komponente aplikacije, baze podataka, poslužiteljske strane i klijentske strane. To smo radili na platformi Render. 
+			
+			Izbornik New pokraj korisničkog imena nudi opcije za puštanje u pogon željene komponente aplikacije. U prvom koraku odabrana je opcija „PostgreSQL“ za pohranu baze podataka na platformi. Nakon toga se unesu osnovni podaci o bazi, a platforma Render onda sama generira ostale potrebne podatke (HostName, Password,...). Nakon što je baza postavljena i na platformi, u željenom alatu (odabran PgAdmin) se baza treba registirati pomoću podataka koje je generirala platforma Render i time je puštanje baze podataka u pogon završeno.
+			
+			\begin{figure}[H]
+				\includegraphics[width=\textwidth]{slike/IzbordnikNew.PNG} 
+				\caption{Izbornik za kreiranje novih komponenata}
+				\label{fig:Izbornik}
+			\end{figure}
 		
-			 \textit{U ovom poglavlju potrebno je dati upute za puštanje u pogon (engl. deployment) ostvarene aplikacije. Na primjer, za web aplikacije, opisati postupak kojim se od izvornog kôda dolazi do potpuno postavljene baze podataka i poslužitelja koji odgovara na upite korisnika. Za mobilnu aplikaciju, postupak kojim se aplikacija izgradi, te postavi na neku od trgovina. Za stolnu (engl. desktop) aplikaciju, postupak kojim se aplikacija instalira na računalo. Ukoliko mobilne i stolne aplikacije komuniciraju s poslužiteljem i/ili bazom podataka, opisati i postupak njihovog postavljanja. Pri izradi uputa preporučuje se \textbf{naglasiti korake instalacije uporabom natuknica} te koristiti što je više moguće \textbf{slike ekrana} (engl. screenshots) kako bi upute bile jasne i jednostavne za slijediti.}
+		\begin{figure}[H]
+			\includegraphics[width=\textwidth]{slike/OsnovniPodaciBaza.PNG} 
+			\caption{Upisivanje početnih podataka za bazu podataka}
+			\label{fig:Početni podaci za bazu podataka}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\includegraphics[width=\textwidth]{slike/Baza1.PNG} 
+			\caption{Generirani podaci za bazu podataka}
+			\label{fig:Generirani podaci za bazu}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\includegraphics[width=\textwidth]{slike/Baza2.PNG} 
+			\caption{Generirani podaci za bazu podataka}
+			\label{fig:Generirani podaci za bazu}
+		\end{figure}
+	
+		\begin{figure}[H]
+			\includegraphics[width=\textwidth]{slike/registracijaservera.PNG} 
+			\caption{Registracija servera u sučelju PgAdmin alata}
+			\label{fig:Registracija servera baze podataka}
+		\end{figure}
+	
+		
+		Za puštanje u pogon poslužiteljske strane u izborniku New platforme Render odabire se opcija WebService te se ostvaruje veza s GitLab repoziorijem iz kojeg se dohvaća kod. Svaki put kad dođe do promjene u repozitoriju, puštanje u pogon će se obaviti automatski ponovno. Osim ispunjavanja osnovnih podataka o poslužiteljskoj strani na Renderu, potrebno je i u kodu unijeti određene promjene. Osim Dockerfile-a, treba ažurirati i datoteku application.properties s podacima za povezivanje s bazom podataka. 
+		
+		\begin{figure}[H]
+			\includegraphics[width=\textwidth]{slike/osnovnipodacibackend.PNG} 
+			\caption{Podaci za poslužiteljsku stranu}
+			\label{fig:Podaci za poslužiteljsku stranu}
+		\end{figure}
+	
+		\begin{figure}[H]
+			\includegraphics[width=\textwidth]{slike/applicationproperties.PNG} 
+			\caption{Datoteka "application.properties"}
+			\label{fig:application.properties}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\includegraphics[width=\textwidth]{slike/dockerfile.PNG} 
+			\caption{Datoteka "Dockerfile"}
+			\label{fig:Dockerfile}
+		\end{figure}
+		
+		Za puštanje u pogon klijentske strane odabire se opcija „WebService“ kao i u prethodnom koraku, ali se upisuju drugačiji podaci (npr. Environment je sada Node i postavljaju se „build command“ kao i „start command“). U environment varijable dodaje se varijabla API-BASE-URL koja se postavlja na adresu poslužiteljske strane. U kodu se kreira datoteka „setupProxy.js“ u kojoj se zahtjevi preusmjeravaju na poslužiteljsku stranu.
 			
-			
-			 \textit{Dovršenu aplikaciju potrebno je pokrenuti na javno dostupnom poslužitelju. Studentima se preporuča korištenje neke od sljedećih besplatnih usluga: \href{https://aws.amazon.com/}{Amazon AWS}, \href{https://azure.microsoft.com/en-us/}{Microsoft Azure} ili \href{https://www.heroku.com/}{Heroku}. Mobilne aplikacije trebaju biti objavljene na F-Droid, Google Play ili Amazon App trgovini.}
-			
-			
+		
+		\begin{figure}[H]
+			\includegraphics[width=\textwidth]{slike/osnovnipodacifrontend.PNG} 
+			\caption{Podaci za klijentsku stranu}
+			\label{fig:Podaci za klijentsku stranu}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\includegraphics[width=\textwidth]{slike/environmentbaseurl.PNG} 
+			\caption{Postavljanje varijable okruženja API-BASE-URL}
+			\label{fig:Varijabla okruženja}
+		\end{figure}	
+	
+	\begin{figure}[H]
+		\includegraphics[width=\textwidth]{slike/setupproxy.PNG} 
+		\caption{Datoteka "setupProxy.js"}
+		\label{fig:Proxy}
+	\end{figure}	
 			\eject 
