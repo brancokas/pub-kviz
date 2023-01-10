@@ -27,17 +27,80 @@
 			
 			
 			\subsection{Ispitivanje sustava}
-			
-			 \textit{Potrebno je provesti i opisati ispitivanje sustava koristeći radni okvir Selenium\footnote{\url{https://www.seleniumhq.org/}}. Razraditi \textbf{minimalno 4 ispitna slučaja} u kojima će se ispitati redovni slučajevi, rubni uvjeti te poziv funkcionalnosti koja nije implementirana/izaziva pogrešku kako bi se vidjelo na koji način sustav reagira kada nešto nije u potpunosti ostvareno. Ispitni slučaj se treba sastojati od ulaza (npr. korisničko ime i lozinka), očekivanog izlaza ili rezultata, koraka ispitivanja i dobivenog izlaza ili rezultata.\\ }
 			 
-			 \textit{Izradu ispitnih slučajeva pomoću radnog okvira Selenium moguće je provesti pomoću jednog od sljedeća dva alata:}
-			 \begin{itemize}
-			 	\item \textit{dodatak za preglednik \textbf{Selenium IDE} - snimanje korisnikovih akcija radi automatskog ponavljanja ispita	}
-			 	\item \textit{\textbf{Selenium WebDriver} - podrška za pisanje ispita u jezicima Java, C\#, PHP koristeći posebno programsko sučelje.}
-			 \end{itemize}
-		 	\textit{Detalji o korištenju alata Selenium bit će prikazani na posebnom predavanju tijekom semestra.}
-			
-			\eject 
+			\textbf{1. Prijava}\\
+				
+				Već registrirani korisnik se nalazi na stranici za prijavu. U polja za unos(Nickname i Password) unosi svoje podatke koje je odredio pri registraciji. Ako je prijava uspješna kao u ovom slučaju, prijavljeni korisnik se usmjerava na Home stranicu, odnosno početnu stranicu aplikacije.
+				
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/UspjesnaPrijava1.PNG} 
+					\caption{Postavke testa}
+					\label{fig:UspjesnaPrijava1}
+				\end{figure}
+
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/UspjesnaPrijava2.PNG} 
+					\caption{Rezultat testa}
+					\label{fig:UspjesnaPrijava1}
+				\end{figure}
+				
+			\eject
+
+			\textbf{2. Neuspješna prijava}\\
+				
+				Korisnik se nalazi na stranici za prijavu te u polja za unos(Nickname i Password) unosi podatke. Nakon unosa i pokušaja prijave, korisniku je javljeno da se nije moguće prijaviti. Sustav mu javlja "You are blocked or your credentials are wrong!". Dvije su mogućnosti zašto se korisnik ne može prijaviti, jedna od njih je ako je korisnik blokiran od strane admina, a druga mogućnost je da je unio krive podatke za prijavu.
+
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/NeuspjesnaPrijava1.PNG} 
+					\caption{Postavke testa}
+					\label{fig:NeuspjesnaPrijava1}
+				\end{figure}
+
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/NeuspjesnaPrijava2.PNG} 
+					\caption{Rezultat testa}
+					\label{fig:NeuspjesnaPrijava2}
+				\end{figure}
+				
+			\eject
+
+			\textbf{3. Uspješna registracija}\\
+				
+				Korisnik se nalazi na stranici za registraciju i ispunjava sve potrebne podatke(ime, prezime, nadimak, email, ulogu, područja znanja i šifru). Nakon klika gumba Submit, ako je registracija uspješna kao u ovom slučaju, novoregistrirani korisnik se usmjerava na stranicu za prijavu gdje se s tim istim podatcima mora prijaviti.
+
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/UspjesnaRegistracija1.PNG} 
+					\caption{Postavke testa}
+					\label{fig:UspjesnaRegistracija1}
+				\end{figure}
+
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/UspjesnaRegistracija2.PNG} 
+					\caption{Rezultat testa}
+					\label{fig:UspjesnaRegistracija2}
+				\end{figure}
+				
+			\eject
+
+			\textbf{4. Neuspješna registracija}\\
+				
+				Korisnik se nalazi na stranici za registraciju i ispunjava polja, no nije ispunio polja "E-mail" i "Knowledge areas:" koja su obavezna. Nakon klika na gumb Submit, neće doći do uspješne registracije jer korisnik nije unio sve obavezne podatke, pa sukladno tome neće biti registriran.
+
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/NeuspjesnaRegistracija1.PNG} 
+					\caption{Postavke testa}
+					\label{fig:NeuspjesnaRegistracija1}
+				\end{figure}
+
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/NeuspjesnaRegistracija2.PNG} 
+					\caption{Rezultat testa}
+					\label{fig:NeuspjesnaRegistracija2}
+				\end{figure}
+				
+			\eject
+
+
 		
 		
 		\section{Dijagram razmještaja}
