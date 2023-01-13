@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.13)  13 JAN 2023 21:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.13)  13 JAN 2023 21:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3042,7 +3042,7 @@ anged.
 Here is how much of TeX's memory you used:
  18187 strings out of 475071
  323628 string characters out of 5782907
- 830163 words of memory out of 5000000
+ 830201 words of memory out of 5000000
  38860 multiletter control sequences out of 15000+600000
  533227 words of font info for 162 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3097,7 +3097,7 @@ type1/public/kpfonts/jkpbn8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public
 /kpfonts/jkpmi.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmi
 t8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmn8a.pfb><c:/
 texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on PROGI_ProjektnaDokumentacija.pdf (80 pages, 4796670 bytes).
+Output written on PROGI_ProjektnaDokumentacija.pdf (80 pages, 4796669 bytes).
 PDF statistics:
  1059 PDF objects out of 1200 (max. 8388607)
  854 compressed objects within 9 object streams
