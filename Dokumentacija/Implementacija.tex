@@ -17,13 +17,97 @@
 		\section{Ispitivanje programskog rješenja}
 			
 			
-			 \textit{U ovom poglavlju je potrebno opisati provedbu ispitivanja implementiranih funkcionalnosti na razini komponenti i na razini cijelog sustava s prikazom odabranih ispitnih slučajeva. Studenti trebaju ispitati temeljnu funkcionalnost i rubne uvjete.}
 	
 			
-			\subsection{Ispitivanje komponenti}
-			\textit{Potrebno je provesti ispitivanje jedinica (engl. unit testing) nad razredima koji implementiraju temeljne funkcionalnosti. Razraditi \textbf{minimalno 6 ispitnih slučajeva} u kojima će se ispitati redovni slučajevi, rubni uvjeti te izazivanje pogreške (engl. exception throwing). Poželjno je stvoriti i ispitni slučaj koji koristi funkcionalnosti koje nisu implementirane. Potrebno je priložiti izvorni kôd svih ispitnih slučajeva te prikaz rezultata izvođenja ispita u razvojnom okruženju (prolaz/pad ispita). }
+			\subsection{Ispitivanje komponenti} 
 			
 			
+			\textbf{1. Testovi za QuizServiceImpl} \\ \\
+			Izvorni kod:
+				
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/QuizServiceImplTest1.PNG} 
+					\caption{Klasa QuizServiceImplTest}
+					\label{fig:QuizServiceImplTest1}
+				\end{figure}
+			
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/QuizServiceImplTest2.PNG} 
+					\caption{Testovi za listu mojih kvizova, iznimke „nema korisnika” i „nema tima”}
+					\label{fig:QuizServiceImplTest2}
+				\end{figure}
+			
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/QuizServiceImplTest3.PNG} 
+					\caption{Lista kvizova, iznimka u mojim kreiranim kvizovima „nema korisnika”, lista mojih kreiranih kvizova}
+					\label{fig:QuizServiceImplTest3}
+				\end{figure}
+			
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/QuizServiceImplTest4.PNG} 
+					\caption{Iznimka, „kreiran kviz sa istim imenom”}
+					\label{fig:QuizServiceImplTest4}
+				\end{figure}
+			
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/QuizServiceImplTest5.PNG} 
+					\caption{Iznimka za dodavanje tima kvizu, „pun kapacitet”}
+					\label{fig:QuizServiceImplTest5}
+				\end{figure}
+			
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/QuizServiceImplTestRez.PNG} 
+					\caption{Rezultati testova}
+					\label{fig:QuizServiceImplTestRez}
+				\end{figure}
+			
+			
+			
+			\textbf{2. Testovi za TeamServiceImpl} \\ \\
+			Izvorni kod:
+			
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/TeamServiceImplTest1.PNG} 
+					\caption{Klasa TeamServiceImplTest}
+					\label{fig:TeamServiceImplTest1}
+				\end{figure}
+			
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/TeamServiceImplTest2.PNG} 
+					\caption{Iznimke, „pun tim” i „igrač nema tim”}
+					\label{fig:TeamServiceImplTest2}
+				\end{figure}
+			
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/TeamServiceImplTestRez.PNG} 
+					\caption{Rezultati testova}
+					\label{fig:TeamServiceImplTestRez}
+				\end{figure}
+			
+			\eject
+			
+			\textbf{3. Testovi za UserServiceImpl} \\ \\
+			Izvorni kod:
+				
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/UserServiceImplTest1.PNG} 
+					\caption{Klasa UserServiceImplTest, iznimka „nema id-a”}
+					\label{fig:UserServiceImplTest1}
+				\end{figure}
+				
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/UserServiceImplTest2.PNG} 
+					\caption{Testovi za „dohvati id” i dohvat svih korisnika}
+					\label{fig:UserServiceImplTest2}
+				\end{figure}
+				
+				\begin{figure}[H]
+					\includegraphics[width=\textwidth]{slike/UserServiceImplTestRez.PNG} 
+					\caption{Rezultati testova}
+					\label{fig:UserServiceImplTestRez}
+				\end{figure}
+								
+			\eject
 			
 			\subsection{Ispitivanje sustava}
 			 
