@@ -177,49 +177,83 @@ Tablica Obavijest sadrži svoj identifikacijski broj, tekst obavijesti koji se p
 		
 			\begin{figure}[H]
 				\includegraphics[width=\textwidth]{dijagrami/classDiagram1.PNG} 
-				\caption{Dijagram razreda, dio Modeli}
+				\caption{Dijagram razreda, dio Domain}
 				\label{fig:classDiagram1}
 			\end{figure}
 		
 			Na slici 4.3 prikazan je dijagram razreda koji prikazuje razrede u objektno orijentiranom sustavu, njihove atribute i metode te međusobnu povezanost. Model razreda preslikava se u bazu podataka prema načelu ORM-a. Razred User predstavlja registriranog korisnika aplikacije koji može imati jednu ili više uloga opisane razredom Role. Korisnik prima obavijesti predstavljene razredom Notification, a kao igrač može pripadati najviše jednoj ekipi koja je opisana razredom Team. Također, korisnik koji je igrač izabire točno tri područja znanja koja su u aplikaciji ostvarena kao enumeracija KnowledgeArea. Korisnik koji je sastavljač može kreirati neograničen broj kvizova opisanih razredom Quiz, a svaki je kviz točno jedne vrste predstavljene enumeracijom QuizType te na jednom kvizu sudjeluje više ekipa, čiji je maksimalni broj određen atributom capacity razreda Quiz. 
 			
+		%	\begin{figure}[H]
+		%		\includegraphics[width=\textwidth]{dijagrami/classDiagram2.PNG} 
+		%		\caption{Dijagram razreda, kontroleri - servisi - repozitoriji}
+		%		\label{fig:classDiagram2}
+		%	\end{figure}
+		
+		%	Na slici 4.4 prikazan je dijagram razreda koji prikazuje organizaciju backenda aplikacije podijeljenu u tri sloja. Prvi sloj čini UserController koji prima zahtjeve i korisniku šalje odgovor te ostvaruje komunikaciju sa slojem poslovne logike u kojem se nalaze sučelja UserService, RoleService i TeamService s popisom potrebnih metoda te njihove pripadajuće implementacije - razredi UserServiceImpl, RoleServiceImpl i TeamServiceImpl. Svaki od navedenih razreda ostvaruje vezu sa svojim repozitorijem, a svaki repozitoriji predstavljen je sučeljem koje onda dodatno nasljeđuje sučelje JpaRepository\textless T, ID\textgreater{} radnog okvira Spring Boot za čiju se implementaciju on sam i pobrine.
+		%	\newline\newline
+			
 			\begin{figure}[H]
-				\includegraphics[width=\textwidth]{dijagrami/classDiagram2.PNG} 
-				\caption{Dijagram razreda, kontroleri - servisi - repozitoriji}
-				\label{fig:classDiagram2}
+				\includegraphics[width=\textwidth]{dijagrami/classDiagram3.PNG} 
+				\caption{Dijagram razreda, Controllers, Services i DTO}
+				\label{fig:classDiagram3}
 			\end{figure}
 		
-			Na slici 4.4 prikazan je dijagram razreda koji prikazuje organizaciju backenda aplikacije podijeljenu u tri sloja. Prvi sloj čini UserController koji prima zahtjeve i korisniku šalje odgovor te ostvaruje komunikaciju sa slojem poslovne logike u kojem se nalaze sučelja UserService, RoleService i TeamService s popisom potrebnih metoda te njihove pripadajuće implementacije - razredi UserServiceImpl, RoleServiceImpl i TeamServiceImpl. Svaki od navedenih razreda ostvaruje vezu sa svojim repozitorijem, a svaki repozitoriji predstavljen je sučeljem koje onda dodatno nasljeđuje sučelje JpaRepository\textless T, ID\textgreater{} radnog okvira Spring Boot za čiju se implementaciju on sam i pobrine.
-			\newline\newline
+			Na slici 4.4 prikazan je dijagram razreda koji opisuje razrede i sučelja u aplikaciji koji pripadaju slojevima kontrolera i poslovne logike, njihove atribute i metode te međusobnu povezanost. Klase na sloju kontrolera prihvaćaju HTTP zahtjeve, pozivaju odgovarajuće usluge s kojima su na dijagramu povezane asocijacijom te vraćaju odgovor klijentu (najčešće u obliku JSON ili HTML datoteke). Za svoj rad koriste i razrede iz paketa dto, što je na dijagramu prikazano vezom ovisnosti pojedinog kontrolera i klase koja u sebi sadrži naziv DTO. Svi razredi iz spomenutog paketa implementiraju gettere i settere.
+			
+			\begin{figure}[H]
+				\includegraphics[width=\textwidth]{dijagrami/classDiagram4.PNG} 
+				\caption{Dijagram razreda, Services i ServicesImpl}
+				\label{fig:classDiagram4}
+			\end{figure}
+			
+			Na slici 4.5 prikazan je dijagram razreda koji opisuje servisni sloj, na kojemu se općenito ostvaruje temeljna funkcionalnost web aplikacije. Svaka klasa koja obavlja određeni zadatak na ovome sloju predstavlja implementaciju sučelja, čime se ostvaruje koncept smanjenja međuovisnosti i omogućava inverzija upravljanja radnog okvira. Osim realizacija sučelja, prikazane su i veze asocijacije pojedinih klasa koje za svoj rad koriste i druga sučelja sa servisnog sloja, a za čije se ubacivanje ovisnosti specifičnih implementacija pobrine sam Spring.  
 	
-			%\textbf{\textit{dio 2. revizije}}\\			
-			
-			%\textit{Prilikom druge predaje projekta dijagram razreda i opisi moraju %odgovarati stvarnom stanju implementacije}
-			
+			\begin{figure}[H]
+				\includegraphics[width=\textwidth]{dijagrami/classDiagram5.PNG} 
+				\caption{Dijagram razreda, Repositories i ServicesImpl}
+				\label{fig:classDiagram5}
+			\end{figure}
+		
+			Na slici 4.6 prikazan je dijagram razreda koji opisuje sloj repozitorija te prikazuje pripadajuće implementacije sučelja servisnog sloja aplikacije. Svaki od navedenih razreda implementacije ostvaruje vezu sa svojim repozitorijem, a svaki repozitoriji predstavljen je sučeljem koje onda dodatno nasljeđuje sučelje JpaRepository\textless T, ID\textgreater{} radnog okvira Spring. Također su prikazane veze između spomenutih sučelja i JpaRepository\textless K, V\textgreater{} koje se nazivaju vezujući odnos (engl. binding relationship), a predstavljaju dodjeljivanje vrijednosti parametrima predloška i generiranje novih element modela iz postojećeg predloška.    
 	
 			
-			%\eject
+			\eject
 		
-		%\section{Dijagram stanja}
-			
-			
-			%\textbf{\textit{dio 2. revizije}}\\
-			
-			%\textit{Potrebno je priložiti dijagram stanja i opisati ga. Dovoljan je jedan dijagram stanja koji prikazuje \textbf{značajan dio funkcionalnosti} sustava. Na primjer, stanja korisničkog sučelja i tijek korištenja neke ključne funkcionalnosti jesu značajan dio sustava, a registracija i prijava nisu. }
-			
-			
-			%\eject 
+		\section{Dijagram stanja}
 		
-		%\section{Dijagram aktivnosti}
-			
-			%\textbf{\textit{dio 2. revizije}}\\
-			
-			 %\textit{Potrebno je priložiti dijagram aktivnosti s pripadajućim opisom. Dijagram aktivnosti treba prikazivati značajan dio sustava.}
-			
-		%	\eject
-		%\section{Dijagram komponenti}
 		
-		%	\textbf{\textit{dio 2. revizije}}\\
+		Dijagram stanja opisuje dinamičko ponašanje dijela sustava u vremenu i  modelira situaciju tijekom koje vrijedi određeni skup uvjeta. Na slici je prikazan dijagram stanja koji prikazuje korisničko sučelje prijavljenog korisnika. Nakon prijave, korisnik je preusmjeren na Home stranicu na kojoj može pregledati opis i logo aplikacije. Koristeći navigacijsku traku može odabirati bilo koju od ponuđenih stranica aplikacije i tako mijenjati prikaz, odnosno stanja. Na stranici Account pregledava svoj korisnički profil te ga može ažurirati odabirom uređivanja profila. Odabirom stranice Stats korisnik može pregledati statistiku, a odabere li stranicu Notifications može vidjeti svoje obavijesti i bilo koju od njih dodatno pregledati. Na stranici Events prikazuju se svi aktivni kvizovi, a korisnik ovisno o ulozi koju ima u aplikaciji može izvoditi opisane akcije. Također, ako korisnik ima ulogu administratora može odabrati stranicu Users te blokirati ili dodijeliti administratorska prava ostalim korisnicima aplikacije. Igrač može pregledati stranicu Teams na kojoj su prikazane informacije o njegovoj ekipi, pri čemu može izvršiti akcije pronalaska ili napuštanja tima. Iz svih stanja moguće je odjaviti se iz sustava. 
 		
-			% \textit{Potrebno je priložiti dijagram komponenti s pripadajućim opisom. Dijagram komponenti treba prikazivati strukturu cijele aplikacije.}
+		
+		\begin{figure}[H]
+			\includegraphics[width=\textwidth]{dijagrami/StatemachineDiagram.PNG} 
+			\caption{Dijagram stanja}
+			\label{fig:StatemachineDiagram}
+		\end{figure}
+		
+		
+		\eject 
+		
+		\section{Dijagram aktivnosti}
+		
+		
+		Dijagram aktivnosti je ponašajni UML dijagram koji modelira ponašanja nizom akcija, pri čemu se mogu definirati uvjeti prije i nakon njihova izvođenja. Primjenjuje se za modeliranje poslovnih procesa i upravljačkog toka, na primjer toka analize obrazaca uporabe kao što je to i ovdje slučaj. Dijagram na slici prikazuje aktivnost kreiranja pub kviza, a podijeljen je na tri vertikalne particije prema aktorima sustava. Sastavljač kviza prijavljuje se u aplikaciju, nakon čega se provjerava ispravnost unesenih podataka. Ako su podaci neispravni korisnik se vraća na unos podataka, a ako su ispravni preusmjerava se na početnu stranicu. Nakon odabira stranice Events i unosa podataka za kreiranje kviza slijedi evaluacija istih podataka i vraćanje odgovora o njihovoj ispravnosti. Ako su podaci neispravni sastavljač može odustati od kreiranja kviza ili ponovno unijeti podatke. Međutim, ako su uneseni podaci ispravni kviz se kreirao i sprema se u bazu podataka, nakon čega slijedi obavijest o kreiranom kvizu i završavanje s radom.   
+		
+		\begin{figure}[H]
+			\includegraphics[width=\textwidth]{dijagrami/ActivityDiagram.PNG} 
+			\caption{Dijagram aktivnosti}
+			\label{fig:ActivityDiagram}
+		\end{figure}
+		
+		\eject
+		\section{Dijagram komponenti}
+		
+			Dijagram komponenti je strukturni statički UML dijagram koji služi za vizualizaciju organizacije i međuovisnosti između implementacijskih komponenata i čini dio specifikacije arhitekture programske potpore. Za pristup sustavu koriste se dva sučelja. Preko sučelja I$\_$HTML$\_$CSS$\_$JS dohvaćaju se HTML, CSS i JS datoteke koje pripadaju frontend dijelu aplikacije. Komponenta Router na upit preko URL-a odlučuje koja će se datoteka poslužiti na sučelje. Frontend se sastoji od JavaScript datoteka koje su raspoređene po komponentama nazvanim prema stranicama aplikacije. Sve te datoteke ovise o React biblioteci iz koje dohvaćaju već gotove komponente poput formi i slično. Preko REST$\_$API sučelja pristupa se komponenti Controller koja poslužuje podatke iz backend dijela aplikacije, a za svoj radi koristi klase komponente DTO koje služe za prijenos podataka između frontenda i backenda. Service ima dva sučelja - implementirano I$\_$SERVICE preko kojeg ostvaruje vezu s Controllerom te zahtijevano I$\_$REPOSITORY preko kojeg poziva metode klasa sa sloja Repository. Komponenta Repository povezana je vezom ovisnosti s komponentom Models koja predstavlja domenske klase aplikacije, a Repository je zadužen za dohvaćanje podataka iz tablica baze podataka pomoću SQL upita, koristeći pritom SQL$\_$API sučelje. React-view komponenta preko dostupnih sučelja komunicira s aplikacijom te ovisno o korisnikovim akcijama osvježava prikaz i dohvaća nove podatke ili datoteke.
+			
+			\begin{figure}[H]
+				\includegraphics[width=\textwidth]{dijagrami/ComponentDiagram.PNG} 
+				\caption{Dijagram komponenti}
+				\label{fig:ComponentDiagram}
+			\end{figure}
+		
 	
